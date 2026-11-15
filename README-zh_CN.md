@@ -7,8 +7,8 @@
 <h3 align="center">Write with Focus. Publish with Joy.</h3>
 
 <p align="center">
-  开源自托管发布平台。CMS、管理后台、无头 API、<br />
-  Next.js 主题、插件与桌面端，一条 CLI 全部装齐。
+  发布不该比写作更贵。<br />
+  开源、可自托管的发布栈 — 一条命令，完整产品。
 </p>
 
 <p align="center">
@@ -27,24 +27,29 @@
   <a href="./README.md">English</a>
 </p>
 
-<p align="center">
-  <img src="./public/poster.png" alt="ReactPress" width="100%" />
-</p>
+https://github.com/user-attachments/assets/bf1ceee9-690c-4db7-af82-fc1ff01770d4
 
-## 核心能力
+## 产品是什么
 
-写作体验对齐 WordPress，工程体验对齐现代前端栈。本地起步无需 Docker、nginx 或独立数据库。
+发布仍然比写作更贵 — Docker、Nginx、数据库运维、多仓库胶水，第一段字还没发出去。**ReactPress 拿掉这份「发布税」。**
 
-| 模块            | 说明                                                                                    |
-| :-------------- | :-------------------------------------------------------------------------------------- |
-| **CMS API**     | NestJS 无头 REST；默认 SQLite，可选 MySQL                                               |
-| **管理后台**    | `/admin/` — 文章、页面、媒体、插件、主题                                                |
-| **主题**        | 可 npm 安装的 Next.js 站点，换肤不动内容                                                |
-| **插件**        | 扩展能力，无需 fork 核心                                                                |
-| **AI Assist**   | 自带 API Key。Skill 写草稿，人工通过后发布                                              |
-| **Agent Skill** | `npx skills add reactpressjs/reactpress --skill blog-ai` — 在 Cursor 中安装、写稿、发布 |
-| **桌面端**      | 同一套栈，打包为原生应用                                                                |
-| **CLI**         | `init` · `doctor` · `logs` · `stop`                                                     |
+一条 CLI 拉起 CMS、管理后台、主题与插件。你专注写与发；基建保持极简、可控、可自托管。面向每一个要发出内容的人 — 写作者、开发者与团队。本地优先；Docker / MySQL 按需启用，不是发出第一篇文章的门槛。
+
+|        |                                        |
+| :----- | :------------------------------------- |
+| **写** | 内置后台 — 文章、页面、媒体            |
+| **管** | 无头 API + 插件 — 扩展无需 fork        |
+| **发** | npm 上的 Next.js 主题 — 换肤，内容不动 |
+| **AI** | 自备 Key 写草稿 — 人审核后再发布       |
+
+## 为什么是 ReactPress
+
+|          | 常见路径                 | ReactPress                        |
+| :------- | :----------------------- | :-------------------------------- |
+| **起步** | 自己拼 API + 后台 + 站点 | `reactpress init` → 约 1 分钟可写 |
+| **栈**   | 发稿前先扛一堆运维       | 一条 CLI，版本对齐                |
+| **主题** | 绑死在平台运行时         | 普通 Next.js，走 npm              |
+| **掌控** | 托管黑盒或 AI 黑盒       | 数据自托管；AI 辅助，你拍板       |
 
 ## 快速开始
 
@@ -62,7 +67,11 @@ reactpress init
 | 管理后台 | http://localhost:3001/admin/ |
 | API      | http://127.0.0.1:3002/api    |
 
-默认账号 `admin` / `admin`，上线前请修改密码。排查问题：`reactpress doctor`。
+默认账号 `admin` / `admin`，上线前请修改。排查：`reactpress doctor`。
+
+```bash
+npx skills add reactpressjs/reactpress --skill blog-ai   # 可选 Agent 工作流
+```
 
 <p>
   <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Freactpressjs%2Freactpress-theme-starter">
@@ -70,19 +79,22 @@ reactpress init
   </a>
 </p>
 
-一键部署主题起步模板 · [仓库](https://github.com/reactpressjs/reactpress-theme-starter) · [预览](https://demo.reactpress.cc/)
+主题起步模板 · [仓库](https://github.com/reactpressjs/reactpress-theme-starter) · [预览](https://demo.reactpress.cc/)
 
 ## 生态
 
-- [文档](https://reactpress.cc/) — 使用指南、API 与架构
-- [主题开发](./themes/README.md) — 构建并发布 Next.js 主题
-- [插件开发](./plugins/README.md) — 扩展后台与 API
-- [桌面端](./desktop/README.md) — 打包为桌面应用
-- [CLI](./cli/README.md) — `reactpressjs` → `@reactpressjs/reactpress`
+|                                                                        |                                             |
+| :--------------------------------------------------------------------- | :------------------------------------------ |
+| [文档](https://reactpress.cc/)                                         | 指南、API、架构                             |
+| [主题开发](./themes/README.md)                                         | 构建并发布 Next.js 主题                     |
+| [插件开发](./plugins/README.md)                                        | 扩展后台与 API                              |
+| [桌面端](./desktop/README.md)                                          | 同一套栈的原生应用                          |
+| [CLI](./cli/README.md)                                                 | `reactpressjs` → `@reactpressjs/reactpress` |
+| [Docker](https://reactpress.cc/docs/tutorial-extras/docker-deployment) | MySQL / 生产 Compose                        |
 
 ## 贡献
 
-欢迎提交 Issue 与 Pull Request，详见 [贡献指南](./CONTRIBUTING.md) 与 [更新日志](./CHANGELOG.md)。
+欢迎 Issue 与 PR。详见 [贡献指南](./CONTRIBUTING.md) 与 [更新日志](./CHANGELOG.md)。
 
 ## 许可证
 

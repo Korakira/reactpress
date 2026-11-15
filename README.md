@@ -7,8 +7,8 @@
 <h3 align="center">Write with Focus. Publish with Joy.</h3>
 
 <p align="center">
-  Self-hosted publishing stack — CMS, Admin, Headless API, Next.js themes,<br />
-  plugins & desktop — one CLI. No Docker required to start.
+  Publishing should not cost more than writing.<br />
+  Open-source, self-hosted publishing — one command, full stack.
 </p>
 
 <p align="center">
@@ -27,26 +27,33 @@
   <a href="./README-zh_CN.md">简体中文</a>
 </p>
 
-<p align="center">
-  <img src="./public/poster.png" alt="ReactPress" width="100%" />
-</p>
+https://github.com/user-attachments/assets/bf1ceee9-690c-4db7-af82-fc1ff01770d4
+
+## What is ReactPress
+
+Publishing still costs more than writing — Docker, Nginx, DBA work, and multi-repo glue before a single paragraph ships. **ReactPress ends that publishing tax.**
+
+One CLI starts CMS, Admin, theme, and plugins. You write and publish; infrastructure stays minimal, controllable, and self-hosted. Built for everyone who ships content — writers, builders, and teams. Local-first; Docker / MySQL when you grow, not as a gate to the first article.
+
+|             |                                                       |
+| :---------- | :---------------------------------------------------- |
+| **Write**   | Built-in Admin — posts, pages, media                  |
+| **Manage**  | Headless API + plugins — extend without forking       |
+| **Publish** | Next.js themes on npm — swap look, keep content       |
+| **AI**      | Drafts with your API key — you approve before publish |
 
 ## Why ReactPress
 
-WordPress-grade editing for frontend teams — without five repos, nginx, or a DBA.
-
-| Layer           | What you get                                                                                   |
-| :-------------- | :--------------------------------------------------------------------------------------------- |
-| **CMS API**     | Headless NestJS REST — SQLite by default, MySQL optional                                       |
-| **Admin**       | Writing console at `/admin/` — posts, pages, media, plugins, themes                            |
-| **Themes**      | npm-installable Next.js frontends — swap without touching content                              |
-| **Plugins**     | Extend the platform without forking the core                                                   |
-| **AI Assist**   | Bring your own API Key. Skills draft; you approve before publish                               |
-| **Agent Skill** | `npx skills add reactpressjs/reactpress --skill blog-ai` — install, write, publish from Cursor |
-| **Desktop**     | Same stack as a native app                                                                     |
-| **CLI**         | `init` · `doctor` · `logs` · `stop` — operate from the terminal                                |
+|             | Typical path                         | ReactPress                               |
+| :---------- | :----------------------------------- | :--------------------------------------- |
+| **Start**   | Assemble API + Admin + site yourself | `reactpress init` → write in ~1 minute   |
+| **Stack**   | Ops-heavy before first publish       | One CLI, versions aligned                |
+| **Theme**   | Locked to the platform runtime       | Normal Next.js apps on npm               |
+| **Control** | Hosted black box or opaque AI        | Self-hosted data; AI assists, you decide |
 
 ## Quick Start
+
+Requires Node.js 20+.
 
 ```bash
 npm install -g reactpressjs
@@ -60,8 +67,11 @@ reactpress init
 | Admin   | http://localhost:3001/admin/ |
 | API     | http://127.0.0.1:3002/api    |
 
-Default login: `admin` / `admin` — change it before production.  
-Stuck? Run `reactpress doctor`.
+Default login: `admin` / `admin` — change before production. Stuck? `reactpress doctor`.
+
+```bash
+npx skills add reactpressjs/reactpress --skill blog-ai   # optional Agent workflow
+```
 
 <p>
   <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Freactpressjs%2Freactpress-theme-starter">
@@ -73,13 +83,14 @@ Theme starter · [repo](https://github.com/reactpressjs/reactpress-theme-starter
 
 ## Ecosystem
 
-|                                         |                                             |
-| :-------------------------------------- | :------------------------------------------ |
-| [Documentation](https://reactpress.cc/) | Guides, API, and architecture               |
-| [Themes](./themes/README.md)            | Build & publish Next.js themes              |
-| [Plugins](./plugins/README.md)          | Extend Admin and the API                    |
-| [Desktop](./desktop/README.md)          | Package the stack as an app                 |
-| [CLI](./cli/README.md)                  | `reactpressjs` → `@reactpressjs/reactpress` |
+|                                                                        |                                             |
+| :--------------------------------------------------------------------- | :------------------------------------------ |
+| [Documentation](https://reactpress.cc/)                                | Guides, API, architecture                   |
+| [Themes](./themes/README.md)                                           | Build & publish Next.js themes              |
+| [Plugins](./plugins/README.md)                                         | Extend Admin and API                        |
+| [Desktop](./desktop/README.md)                                         | Same stack as a native app                  |
+| [CLI](./cli/README.md)                                                 | `reactpressjs` → `@reactpressjs/reactpress` |
+| [Docker](https://reactpress.cc/docs/tutorial-extras/docker-deployment) | MySQL / production Compose                  |
 
 ## Contributing
 
