@@ -57,14 +57,14 @@ html[data-theme='dark'] .eyebrow {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: 1px solid var(--home-border);
 }
 
 .card {
   position: relative;
-  padding: 1.75rem 1.5rem 1.85rem;
+  padding: 1.75rem 1.25rem 1.85rem;
   border-right: 1px solid var(--home-border);
   animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
   transition: background 0.25s ease;
@@ -123,6 +123,12 @@ html[data-theme='dark'] .step {
   -webkit-text-fill-color: transparent;
 }
 
+.card[data-accent='ai'] .cardTitle {
+  background: linear-gradient(115deg, #0ea5b4 0%, #41d1ff 55%, #087ea4 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .tagline {
   font-size: 1.02rem;
   font-weight: 650;
@@ -146,13 +152,29 @@ html[data-theme='dark'] .step {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .card:nth-child(n + 3) {
+    border-top: 1px solid var(--home-border);
+  }
+}
+
+@media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
     border-top: none;
   }
 
-  .card {
+  .card,
+  .card:nth-child(2n),
+  .card:nth-child(n + 3) {
     border-right: none;
     border-top: 1px solid var(--home-border);
     padding: 1.5rem 0.25rem 1.6rem;

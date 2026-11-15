@@ -60,12 +60,16 @@ type Endpoint = {
 
 const endpoints: Endpoint[] = [
   {
-    label: translate({ message: 'Website', id: 'home.quickstart.endpoint.site' }),
+    label: translate({ message: 'Site', id: 'home.quickstart.endpoint.site' }),
     href: 'http://localhost:3001',
   },
   {
     label: translate({ message: 'Admin', id: 'home.quickstart.endpoint.admin' }),
     href: 'http://localhost:3001/admin/',
+  },
+  {
+    label: translate({ message: 'API', id: 'home.quickstart.endpoint.api' }),
+    href: 'http://127.0.0.1:3002/api',
   },
 ];
 

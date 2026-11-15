@@ -21,7 +21,7 @@ const Index = () => {
   });
   const description = translate({
     message:
-      'ReactPress is a self-hosted publishing platform to write, manage, and publish — all in one place. Themes, plugins, desktop app, and one CLI. Live in about 60 seconds.',
+      'ReactPress ends the publishing tax — open-source, self-hosted writing, managing, and publishing in one CLI. Themes, plugins, desktop, and AI assist. Live in about 60 seconds.',
     id: 'home.meta.description',
   });
   const imageUrl = socialCardUrl(siteConfig.url);

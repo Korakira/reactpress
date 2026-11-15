@@ -46,7 +46,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['zh', 'en'],
+    locales: ['en', 'zh'],
     localeConfigs: {
       en: {
         label: 'English',
@@ -128,6 +128,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/reactpress-social-card.png',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'ReactPress',
       logo: {

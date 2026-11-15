@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import React from 'react';
 import GitHubButton from 'react-github-btn';
 
-import HeroCarousel from './HeroCarousel';
+import HeroVideo from './HeroVideo';
 import styles from './styles.module.css';
 
 function VercelIcon() {
@@ -78,8 +78,8 @@ function Hero() {
           </p>
           <p className={styles.subTitle}>
             <Translate id="home.hero.subTitle">
-              A self-hosted publishing platform — write, manage, and publish in one place. Not another Headless CMS to
-              assemble.
+              Publishing should not cost more than writing. Open-source, self-hosted publishing — one command, full
+              stack.
             </Translate>
           </p>
 
@@ -112,7 +112,7 @@ function Hero() {
         </div>
 
         <div className={styles.mediaStage}>
-          <HeroCarousel />
+          <HeroVideo />
         </div>
       </div>
     </header>

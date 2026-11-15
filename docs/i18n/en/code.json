@@ -317,16 +317,58 @@
     "message": "ReactPress — Write with Focus. Publish with Joy."
   },
   "home.meta.description": {
-    "message": "ReactPress is a self-hosted publishing platform to write, manage, and publish — all in one place. Themes, plugins, desktop app, and one CLI. Live in about 60 seconds."
+    "message": "ReactPress ends the publishing tax — open-source, self-hosted writing, managing, and publishing in one CLI. Themes, plugins, desktop, and AI assist. Live in about 60 seconds."
   },
   "home.hero.eyebrow": {
     "message": "Open source · Self-hosted · React-native"
   },
   "home.hero.subTitle": {
-    "message": "A self-hosted publishing platform — write, manage, and publish in one place. Not another Headless CMS to assemble."
+    "message": "Publishing should not cost more than writing. Open-source, self-hosted publishing — one command, full stack."
   },
   "home.hero.media.caption": {
     "message": "Admin, theme, and publishing — the real product, not a mock."
+  },
+  "home.hero.video.aria": {
+    "message": "ReactPress promotional film"
+  },
+  "home.hero.video.fallback": {
+    "message": "Your browser does not support embedded video."
+  },
+  "home.hero.video.label": {
+    "message": "Product film"
+  },
+  "home.hero.video.title": {
+    "message": "One CLI. Full publishing stack."
+  },
+  "home.hero.video.caption": {
+    "message": "From init to Site, Admin, and API — open-source, self-hosted publishing without the ops tax."
+  },
+  "home.hero.video.play": {
+    "message": "Play ReactPress film"
+  },
+  "home.hero.video.resume": {
+    "message": "Resume video"
+  },
+  "home.hero.video.pause": {
+    "message": "Pause video"
+  },
+  "home.hero.video.mute": {
+    "message": "Mute video"
+  },
+  "home.hero.video.unmute": {
+    "message": "Unmute video"
+  },
+  "home.hero.video.playShort": {
+    "message": "Play"
+  },
+  "home.hero.video.pauseShort": {
+    "message": "Pause"
+  },
+  "home.hero.video.muteShort": {
+    "message": "Mute"
+  },
+  "home.hero.video.unmuteShort": {
+    "message": "Unmute"
   },
   "home.hero.carousel.aria": {
     "message": "ReactPress product tour"
@@ -386,7 +428,7 @@
     "message": "Get Started"
   },
   "home.hero.whatsNew": {
-    "message": "What's New in 4.0"
+    "message": "What's New in 5.0"
   },
   "home.hero.download": {
     "message": "Download Desktop"
@@ -488,10 +530,13 @@
     "message": "Starts API, Admin, and theme automatically."
   },
   "home.quickstart.endpoint.site": {
-    "message": "Website"
+    "message": "Site"
   },
   "home.quickstart.endpoint.admin": {
     "message": "Admin"
+  },
+  "home.quickstart.endpoint.api": {
+    "message": "API"
   },
   "home.quickstart.after": {
     "message": "Then open"
@@ -683,34 +728,43 @@
     "message": "Write. Manage. Publish."
   },
   "home.platform.subtitle": {
-    "message": "The whole publishing stack in one product — so creators and React developers ship without stitching five tools together."
+    "message": "ReactPress ends the publishing tax — one CLI starts CMS, Admin, theme, and plugins so you can ship content without stitching five tools together."
   },
   "home.platform.build.title": {
     "message": "Write"
   },
   "home.platform.build.tagline": {
-    "message": "Focus first."
+    "message": "Built-in Admin."
   },
   "home.platform.build.desc": {
-    "message": "A calm editor for posts, pages, and media — stay in flow, not in tooling."
+    "message": "Posts, pages, and media in one calm editor — stay in flow, not in tooling."
   },
   "home.platform.manage.title": {
     "message": "Manage"
   },
   "home.platform.manage.tagline": {
-    "message": "One place."
+    "message": "Headless + plugins."
   },
   "home.platform.manage.desc": {
-    "message": "Content, SEO, themes, and plugins in one self-hosted CMS — on your terms."
+    "message": "Extend Admin and API without forking — content stays self-hosted and under your control."
   },
   "home.platform.extend.title": {
     "message": "Publish"
   },
   "home.platform.extend.tagline": {
-    "message": "Ship with joy."
+    "message": "Next.js themes on npm."
   },
   "home.platform.extend.desc": {
-    "message": "Next.js themes, plugins, or Headless API — from CLI to a live site."
+    "message": "Swap the look, keep the content — normal Next.js apps, not a locked platform runtime."
+  },
+  "home.platform.ai.title": {
+    "message": "AI"
+  },
+  "home.platform.ai.tagline": {
+    "message": "Your key. Your call."
+  },
+  "home.platform.ai.desc": {
+    "message": "Draft with your own API key — AI assists, you approve before anything publishes."
   },
   "home.ecosystem.eyebrow": {
     "message": "Ecosystem"

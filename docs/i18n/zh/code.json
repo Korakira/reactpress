@@ -6,16 +6,58 @@
     "message": "ReactPress — 专注写作，愉快发布"
   },
   "home.meta.description": {
-    "message": "ReactPress 是可自托管的发布平台：写作、管理、发布一站式完成。主题、插件、桌面端与一条 CLI，约 60 秒上线。"
+    "message": "ReactPress 拿掉「发布税」— 开源、可自托管；写作、管理、发布由一条 CLI 拉起。主题、插件、桌面端与 AI 辅助，约 60 秒上线。"
   },
   "home.hero.eyebrow": {
     "message": "开源 · 自托管 · React 原生"
   },
   "home.hero.subTitle": {
-    "message": "可自托管的发布平台 — 写作、管理、发布一站完成。不是又一个需要自己拼装的 Headless CMS。"
+    "message": "发布不该比写作更贵。开源、可自托管的发布栈 — 一条命令，完整产品。"
   },
   "home.hero.media.caption": {
     "message": "后台、主题与发布 — 真实产品画面，而非示意插画。"
+  },
+  "home.hero.video.aria": {
+    "message": "ReactPress 宣传片"
+  },
+  "home.hero.video.fallback": {
+    "message": "当前浏览器不支持嵌入视频。"
+  },
+  "home.hero.video.label": {
+    "message": "产品宣传片"
+  },
+  "home.hero.video.title": {
+    "message": "一条 CLI，完整发布栈。"
+  },
+  "home.hero.video.caption": {
+    "message": "从 init 到 Site、Admin 与 API — 开源可自托管，不必先扛运维税。"
+  },
+  "home.hero.video.play": {
+    "message": "播放 ReactPress 宣传片"
+  },
+  "home.hero.video.resume": {
+    "message": "继续播放"
+  },
+  "home.hero.video.pause": {
+    "message": "暂停视频"
+  },
+  "home.hero.video.mute": {
+    "message": "静音"
+  },
+  "home.hero.video.unmute": {
+    "message": "取消静音"
+  },
+  "home.hero.video.playShort": {
+    "message": "播放"
+  },
+  "home.hero.video.pauseShort": {
+    "message": "暂停"
+  },
+  "home.hero.video.muteShort": {
+    "message": "静音"
+  },
+  "home.hero.video.unmuteShort": {
+    "message": "开声"
   },
   "home.hero.carousel.aria": {
     "message": "ReactPress 产品导览"
@@ -75,7 +117,7 @@
     "message": "快速开始"
   },
   "home.hero.whatsNew": {
-    "message": "4.0 新特性"
+    "message": "5.0 新特性"
   },
   "home.hero.download": {
     "message": "下载桌面端"
@@ -145,6 +187,9 @@
   },
   "home.quickstart.endpoint.admin": {
     "message": "管理后台"
+  },
+  "home.quickstart.endpoint.api": {
+    "message": "API"
   },
   "home.quickstart.after": {
     "message": "然后打开"
@@ -315,34 +360,43 @@
     "message": "写作 · 管理 · 发布"
   },
   "home.platform.subtitle": {
-    "message": "完整发布栈收进一个产品 — 创作者与 React 开发者不必再拼五套工具才能上线。"
+    "message": "ReactPress 拿掉「发布税」— 一条 CLI 拉起 CMS、后台、主题与插件，不必再拼五套工具才能发出内容。"
   },
   "home.platform.build.title": {
     "message": "写作"
   },
   "home.platform.build.tagline": {
-    "message": "专注优先。"
+    "message": "内置后台。"
   },
   "home.platform.build.desc": {
-    "message": "平静的编辑器承载文章、页面与媒体 — 保持心流，而不是折腾工具。"
+    "message": "文章、页面与媒体在一个平静的编辑器里 — 保持心流，而不是折腾工具。"
   },
   "home.platform.manage.title": {
     "message": "管理"
   },
   "home.platform.manage.tagline": {
-    "message": "一处完成。"
+    "message": "无头 API + 插件。"
   },
   "home.platform.manage.desc": {
-    "message": "内容、SEO、主题与插件，统一在可自托管的 CMS 里 — 由你掌控。"
+    "message": "扩展 Admin 与 API 无需 fork — 内容自托管，掌控权在你手里。"
   },
   "home.platform.extend.title": {
     "message": "发布"
   },
   "home.platform.extend.tagline": {
-    "message": "愉快上线。"
+    "message": "npm 上的 Next.js 主题。"
   },
   "home.platform.extend.desc": {
-    "message": "Next.js 主题、插件或 Headless API — 从 CLI 到线上站点。"
+    "message": "换肤，内容不动 — 普通 Next.js 应用，不被平台运行时绑死。"
+  },
+  "home.platform.ai.title": {
+    "message": "AI"
+  },
+  "home.platform.ai.tagline": {
+    "message": "自备 Key，你拍板。"
+  },
+  "home.platform.ai.desc": {
+    "message": "用你自己的 API Key 写草稿 — AI 辅助，人审核后再发布。"
   },
   "home.ecosystem.eyebrow": {
     "message": "生态"
