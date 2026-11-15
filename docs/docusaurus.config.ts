@@ -180,7 +180,7 @@ const config: Config = {
           position: 'left',
           items: [
             { to: '/docs/tutorial-extras/desktop-client', label: 'Download' },
-            { href: 'https://blog.gaoredu.com/', label: 'Demo' },
+            { href: 'https://demo.reactpress.cc/', label: 'Demo' },
           ],
         },
         {
@@ -214,7 +214,7 @@ const config: Config = {
             },
             {
               label: 'Live demo',
-              href: 'https://blog.gaoredu.com/',
+              href: 'https://demo.reactpress.cc/',
             },
           ],
         },

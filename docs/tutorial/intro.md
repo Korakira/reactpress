@@ -86,7 +86,7 @@ reactpress init
 
 ## 在线示例
 
-[ReactPress Demo](https://blog.gaoredu.com/) · [官方主题演示](https://demo.reactpress.cc/)
+[ReactPress Demo](https://demo.reactpress.cc/) · [官方主题演示](https://demo.reactpress.cc/)
 
 ## 框架对比
 

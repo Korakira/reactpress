@@ -74,7 +74,7 @@ ReactPress 由 [reactpressjs](https://github.com/reactpressjs) 维护，采用 *
 - [官网](https://www.reactpress.cc/) · [文档](/zh/docs/intro)
 - [GitHub](https://github.com/reactpressjs) · [源码仓库](https://github.com/reactpressjs/reactpress)
 - [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
-- [在线演示](https://blog.gaoredu.com/) — ReactPress 驱动的生产站点
+- [在线演示](https://demo.reactpress.cc/) — ReactPress 驱动的生产站点
 - [主题](/zh/themes) · [插件](/zh/plugins) · [最佳实践](/zh/best-practices) · [更新日志](/zh/blog/changelog)
 
 ## 联系我们

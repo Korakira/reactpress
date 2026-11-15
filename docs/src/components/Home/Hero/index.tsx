@@ -93,7 +93,7 @@ function Hero() {
                 <Translate id="home.hero.intro">Get Started</Translate>
               </Link>
               <a
-                href="https://blog.gaoredu.com/"
+                href="https://demo.reactpress.cc/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.secondaryButton}

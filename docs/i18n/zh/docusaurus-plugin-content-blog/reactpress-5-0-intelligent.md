@@ -130,5 +130,5 @@ reactpress doctor
 
 - [ReactPress 5.0 智能版指南](/docs/tutorial-extras/reactpress-5-0)
 - [5 分钟创建第一个站点](/docs/getting-started/first-site)
-- [在线演示](https://blog.gaoredu.com/) · [主题演示](https://demo.reactpress.cc/)
+- [在线演示](https://demo.reactpress.cc/) · [主题演示](https://demo.reactpress.cc/)
 - [GitHub](https://github.com/reactpressjs/reactpress) · [English](pathname:///blog/reactpress-5-0-intelligent)

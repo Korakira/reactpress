@@ -361,7 +361,7 @@ my-site/
 
 | Demo      | URL                                               |
 | :-------- | :------------------------------------------------ |
-| 生产站点  | [blog.gaoredu.com](https://blog.gaoredu.com/)     |
+| 生产站点  | [demo.reactpress.cc](https://demo.reactpress.cc/) |
 | 主题 Demo | [demo.reactpress.cc](https://demo.reactpress.cc/) |
 | 文档      | [reactpress.cc](https://reactpress.cc)            |
 
@@ -713,7 +713,7 @@ reactpress init
 ## 相关链接
 
 - [GitHub 仓库](https://github.com/reactpressjs/reactpress)
-- [在线 Demo](https://blog.gaoredu.com/)
+- [在线 Demo](https://demo.reactpress.cc/)
 - [英文版长文](pathname:///blog/why-react-still-doesnt-have-wordpress-reactpress-4)
 - [ReactPress 4.0 指南](/docs/tutorial-extras/reactpress-4-0)
 - [ReactPress vs WordPress](/docs/getting-started/reactpress-vs-wordpress)

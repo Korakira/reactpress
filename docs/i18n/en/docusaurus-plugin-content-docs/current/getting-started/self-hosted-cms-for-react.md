@@ -41,7 +41,7 @@ Default path: **SQLite**, no Docker, no cloud account.
 | **How the site renders** | Your Next.js theme process; swap or fork anytime            |
 | **License**              | **MIT** — fork, commercial use, no seat tax                 |
 
-Live example of a production ReactPress site: [blog.gaoredu.com](https://blog.gaoredu.com/).
+Live example of a production ReactPress site: [demo.reactpress.cc](https://demo.reactpress.cc/).
 
 ## Why React teams self-host ReactPress
 

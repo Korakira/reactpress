@@ -41,4 +41,4 @@ keywords: [reactpress, 联系, 支持, github issues]
 - [关于 ReactPress](/zh/about)
 - [GitHub](https://github.com/reactpressjs) · [源码仓库](https://github.com/reactpressjs/reactpress)
 - [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
-- [在线演示](https://blog.gaoredu.com/)
+- [在线演示](https://demo.reactpress.cc/)

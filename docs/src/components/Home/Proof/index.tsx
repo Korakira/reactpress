@@ -26,7 +26,7 @@ export default function Proof() {
           <div className={styles.links}>
             <a
               className={styles.linkPrimary}
-              href="https://blog.gaoredu.com/"
+              href="https://demo.reactpress.cc/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -74,7 +74,7 @@ ReactPress is developed by [reactpressjs](https://github.com/reactpressjs) and r
 - [Official site](https://www.reactpress.cc/) · [Documentation](/docs/intro)
 - [GitHub](https://github.com/reactpressjs) · [Source repo](https://github.com/reactpressjs/reactpress)
 - [npm](https://www.npmjs.com/~reactpressjs) · [CLI package](https://www.npmjs.com/package/@reactpressjs/reactpress)
-- [Live demo](https://blog.gaoredu.com/) — production site powered by ReactPress
+- [Live demo](https://demo.reactpress.cc/) — production site powered by ReactPress
 - [Themes](/themes) · [Plugins](/plugins) · [Best practices](/best-practices) · [Changelog](/blog/changelog)
 
 ## Contact

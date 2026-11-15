@@ -716,7 +716,7 @@ For **Next.js CMS** evaluations, this matters: you should not trade WordPress-st
 
 | Demo            | URL                                               |
 | :-------------- | :------------------------------------------------ |
-| Production blog | [blog.gaoredu.com](https://blog.gaoredu.com/)     |
+| Production blog | [demo.reactpress.cc](https://demo.reactpress.cc/) |
 | Theme starter   | [demo.reactpress.cc](https://demo.reactpress.cc/) |
 | Documentation   | [reactpress.cc](https://reactpress.cc)            |
 
@@ -1410,7 +1410,7 @@ Yes. MIT license. Commercial use allowed. Self-host without vendor fees.
 
 ### Is 4.0 production-ready?
 
-Yes. 4.0.0 is the current stable release on npm (`@reactpressjs/reactpress`). Core paths (`init`, Admin, API, theme, plugins) are battle-tested in community and dogfood sites like [blog.gaoredu.com](https://blog.gaoredu.com/). When upgrading from 3.x, validate on staging; read [migration guide](/docs/tutorial-extras/migration-3-to-4).
+Yes. 4.0.0 is the current stable release on npm (`@reactpressjs/reactpress`). Core paths (`init`, Admin, API, theme, plugins) are battle-tested in community and dogfood sites like [demo.reactpress.cc](https://demo.reactpress.cc/). When upgrading from 3.x, validate on staging; read [migration guide](/docs/tutorial-extras/migration-3-to-4).
 
 ### Do I need Docker?
 
@@ -2559,7 +2559,7 @@ _Document ID: `why-react-still-doesnt-have-wordpress-reactpress-4` · Character 
 ## Related links
 
 - [GitHub — reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)
-- [Live demo — blog.gaoredu.com](https://blog.gaoredu.com/)
+- [Live demo — demo.reactpress.cc](https://demo.reactpress.cc/)
 - [Theme demo — demo.reactpress.cc](https://demo.reactpress.cc/)
 - [Documentation — reactpress.cc](https://reactpress.cc)
 - [中文版 / Chinese version](pathname:///zh/blog/why-react-still-doesnt-have-wordpress-reactpress-4)

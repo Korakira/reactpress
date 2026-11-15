@@ -21,7 +21,7 @@
 
 <p align="center">
   <a href="https://reactpress.cc/">文档</a> ·
-  <a href="https://blog.gaoredu.com/">在线演示</a> ·
+  <a href="https://demo.reactpress.cc/">在线演示</a> ·
   <a href="https://demo.reactpress.cc/">主题演示</a> ·
   <a href="https://github.com/reactpressjs/reactpress">GitHub</a> ·
   <a href="./README.md">English</a>

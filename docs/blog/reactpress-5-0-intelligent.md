@@ -130,5 +130,5 @@ Write with focus. Publish with joy — and approve before anything goes live.
 
 - [ReactPress 5.0 Intelligent guide](/docs/tutorial-extras/reactpress-5-0)
 - [5-minute first site](/docs/getting-started/first-site)
-- [Live Demo](https://blog.gaoredu.com/) · [Theme Demo](https://demo.reactpress.cc/)
+- [Live Demo](https://demo.reactpress.cc/) · [Theme Demo](https://demo.reactpress.cc/)
 - [GitHub](https://github.com/reactpressjs/reactpress) · [中文版](pathname:///zh/blog/reactpress-5-0-intelligent)

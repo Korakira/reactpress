@@ -83,7 +83,7 @@ Theme demo: [demo.reactpress.cc](https://demo.reactpress.cc/)
 
 ## Live demos
 
-[ReactPress Demo](https://blog.gaoredu.com/) · [Official theme demo](https://demo.reactpress.cc/)
+[ReactPress Demo](https://demo.reactpress.cc/) · [Official theme demo](https://demo.reactpress.cc/)
 
 ## Comparison
 

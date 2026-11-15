@@ -31,7 +31,7 @@ reactpress init
 | **站点如何渲染** | 你的 Next.js 主题进程；可随时替换或 fork               |
 | **许可**         | **MIT** — 可 fork、可商用，无按席位收费                |
 
-生产站点示例：[blog.gaoredu.com](https://blog.gaoredu.com/)。
+生产站点示例：[demo.reactpress.cc](https://demo.reactpress.cc/)。
 
 ## 为什么 React 团队选择自托管 ReactPress
 
