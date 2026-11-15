@@ -88,7 +88,28 @@ WordPress 是面向广泛站长的 PHP CMS。ReactPress 强调 **React 开发者
 <details>
 <summary><strong>ReactPress 免费吗？</strong></summary>
 
-是，MIT 开源。全局安装：`npm i -g reactpressjs`。
+是，MIT 开源。全局安装：`npm i -g reactpressjs`。详见 [关于 · 开源与许可](/zh/about)。
+
+</details>
+
+<details>
+<summary><strong>谁在维护 ReactPress？</strong></summary>
+
+由 GitHub 开源组织 [reactpressjs](https://github.com/reactpressjs) 维护。官方仓库：[reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)。维护者邮箱：[admin@gaoredu.com](mailto:admin@gaoredu.com)。
+
+</details>
+
+<details>
+<summary><strong>发现问题如何联系？</strong></summary>
+
+Bug 与可复现问题用 [GitHub Issues](https://github.com/reactpressjs/reactpress/issues)；讨论用 [Discussions](https://github.com/reactpressjs/reactpress/discussions)；安全与私人/商务事项发 [admin@gaoredu.com](mailto:admin@gaoredu.com)。完整渠道见 [联系我们](/zh/contact)。
+
+</details>
+
+<details>
+<summary><strong>有商业化或企业支持计划吗？</strong></summary>
+
+核心保持 MIT、可免费自托管。规划中包括 Marketplace、托管合作与商业支持/定制交付，正式套餐页尚未上线。询价请写邮件并说明场景，见 [关于 · 商业化计划](/zh/about)。
 
 </details>
 

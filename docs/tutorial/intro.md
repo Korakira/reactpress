@@ -41,15 +41,24 @@ keywords:
 | **上线**   | 运维                  | [生产部署](./tutorial-basics/deploy-your-site.md) → [Docker](./tutorial-extras/docker-deployment.md)                                                                                                         |
 | **排错**   | 遇到问题              | [FAQ](./reference/faq.md) → [故障排查](./reference/troubleshooting.md)                                                                                                                                       |
 
-## 功能特性
+## 当前可用功能（5.0）
 
-- ✍️ **写作与内容管理** — 在专注的编辑器中创建、整理并发布内容
-- 🎨 **主题** — 自定义网站外观。[起步模板](https://github.com/reactpressjs/reactpress-theme-starter) · [主题指南](./developer-guide/theme-development.md)
-- 🧩 **插件** — 通过 Hook 扩展 ReactPress。[插件指南](./developer-guide/plugin-development.md)
-- 🖥️ **桌面应用** — 在桌面端获得同样的使用体验。[桌面端指南](./tutorial-extras/desktop-client.md)
-- 📱 **多端访问** — 支持桌面、平板与移动端浏览器
+安装 `reactpressjs` 后即可使用（非远期愿景）：
 
-**ReactPress 5.0**（代号 **Intelligent**）在 4.0 之上加入 **AI Assist**：Skill 写草稿，人在审核收件箱通过后才发布。详见 [ReactPress 5.0 智能版](./tutorial-extras/reactpress-5-0.md)。
+| 能力                  | 现状          | 说明                                              |
+| --------------------- | ------------- | ------------------------------------------------- |
+| **CLI**               | 已可用        | `init` / `doctor` / `logs` / `stop`，约 60 秒起站 |
+| **CMS Admin**         | 已可用        | 文章、页面、媒体、分类、标签、评论                |
+| **NestJS API**        | 已可用        | Headless REST、API Key、Webhook                   |
+| **Next.js 主题**      | 已可用        | SSR/ISR、SEO、sitemap、OG；可换官方 starter       |
+| **插件系统**          | 已可用        | Hook + `plugin.json`；内置 SEO / 摘要 / WebP 等   |
+| **AI Assist**         | 已可用（5.0） | 自带 Key 写草稿，审核收件箱通过后才发布           |
+| **桌面客户端**        | 已可用        | Electron 离线写作，可同步远程 API                 |
+| **Docker / 生产部署** | 已可用        | 见部署与 Docker 文档                              |
+
+**远期（尚未上线产品）：** 公开 Marketplace、托管合作、标准化企业套餐 — 见 [关于 ReactPress · 商业化计划](/zh/about)。
+
+详见 [ReactPress 5.0 智能版](./tutorial-extras/reactpress-5-0.md) · [主题](/zh/themes) · [插件](/zh/plugins)。
 
 ## 快速开始
 
@@ -135,7 +144,21 @@ Email: admin@gaoredu.com
 <details>
 <summary><strong>ReactPress 免费吗？</strong></summary>
 
-是，MIT 开源。安装：`npm i -g reactpressjs`。
+是，MIT 开源。安装：`npm i -g reactpressjs`。详见 [关于 · 开源与许可](/zh/about)。
+
+</details>
+
+<details>
+<summary><strong>谁在维护？如何联系？</strong></summary>
+
+由 GitHub 组织 [reactpressjs](https://github.com/reactpressjs) 维护。社区走 Issues / Discussions；维护者与商务邮件：[admin@gaoredu.com](mailto:admin@gaoredu.com)。见 [联系我们](/zh/contact)。
+
+</details>
+
+<details>
+<summary><strong>有商业化计划吗？</strong></summary>
+
+核心保持 MIT 免费自托管。规划中的是 Marketplace、托管合作与商业支持/定制，尚未上线正式产品页。询价见 [关于 · 商业化计划](/zh/about)。
 
 </details>
 

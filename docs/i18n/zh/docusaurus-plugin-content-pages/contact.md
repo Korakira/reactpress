@@ -16,7 +16,17 @@ keywords: [reactpress, 联系, 支持, github issues]
 | **GitHub Discussions** | 提问、想法、展示               | [github.com/reactpressjs/reactpress/discussions](https://github.com/reactpressjs/reactpress/discussions) |
 | **微信**               | 社区动态（任意页面右侧可扫码） | 见页面右侧浮动「微信」按钮                                                                               |
 | **X**                  | 产品动态与公告                 | [x.com/reactpressjs](https://x.com/reactpressjs)                                                         |
-| **邮件**               | 私人咨询、安全报告             | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
+| **邮件**               | 私人咨询、安全报告、商务       | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
+
+## 社区 vs 商务
+
+| 需求                                    | 去哪                                                                             |
+| --------------------------------------- | -------------------------------------------------------------------------------- |
+| Bug、文档问题、功能想法                 | 上表 GitHub Issues / Discussions                                                 |
+| 安全漏洞                                | 仅邮件 — 见 [安全报告](#安全报告)                                                |
+| 商业支持、主题/插件定制、合作、托管咨询 | 发邮件至 [admin@gaoredu.com](mailto:admin@gaoredu.com)，注明公司、场景与时间期望 |
+
+维护者与商业化说明见 [关于 ReactPress](/zh/about)。
 
 ## 提交 Issue 前
 

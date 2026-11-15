@@ -68,7 +68,28 @@ We are **not** positioning ReactPress as “WordPress rewritten in React.” The
 
 ## Open source & license
 
-ReactPress is developed by [reactpressjs](https://github.com/reactpressjs) and released under the **MIT License**. The official source repository is **[reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)** — issues and contributions belong there.
+ReactPress is **open source** under the **MIT License**. You may use, modify, and deploy it commercially without royalties.
+
+The official source repository is **[reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)** — issues and contributions belong there.
+
+## Who maintains ReactPress?
+
+| Item               | Detail                                                                                                                                                           |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Maintainer         | The **[reactpressjs](https://github.com/reactpressjs)** open-source organization on GitHub                                                                       |
+| Official site      | [reactpress.cc](https://www.reactpress.cc/)                                                                                                                      |
+| Maintainer contact | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                                                                                    |
+| Community          | [GitHub Issues](https://github.com/reactpressjs/reactpress/issues) · [Discussions](https://github.com/reactpressjs/reactpress/discussions) · [Contact](/contact) |
+
+Day-to-day product and docs decisions happen in the public `reactpressjs` org. For private or partnership topics, email the maintainer address above.
+
+## Commercialization plans
+
+**Today:** the core product (CLI, CMS, Admin, themes, plugins, desktop) stays **MIT and free to self-host**. There is no paid core license.
+
+**Next:** we plan an ecosystem layer — theme/plugin **Marketplace**, optional **managed hosting** partnerships, and **commercial support / custom work** for teams that need SLA or delivery help. Those offerings are not a product page yet; inquire via [Contact](/contact) if you need them now.
+
+**Principle:** open-source core first; paid services (if any) sit around the ecosystem, not behind a paywall for basic publishing.
 
 ## Live demo & hubs
 

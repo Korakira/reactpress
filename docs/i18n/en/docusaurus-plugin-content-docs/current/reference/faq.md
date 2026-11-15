@@ -88,7 +88,28 @@ Content can be exported and re-imported via scripts or integrated through the He
 <details>
 <summary><strong>Is ReactPress free?</strong></summary>
 
-Yes. ReactPress is open source under the MIT license. Install globally: `npm i -g reactpressjs`.
+Yes. ReactPress is open source under the MIT license. Install globally: `npm i -g reactpressjs`. See [About · Open source](/about).
+
+</details>
+
+<details>
+<summary><strong>Who maintains ReactPress?</strong></summary>
+
+The [reactpressjs](https://github.com/reactpressjs) GitHub organization. Official repo: [reactpressjs/reactpress](https://github.com/reactpressjs/reactpress). Maintainer email: [admin@gaoredu.com](mailto:admin@gaoredu.com).
+
+</details>
+
+<details>
+<summary><strong>How do I contact maintainers if something breaks?</strong></summary>
+
+Bugs → [GitHub Issues](https://github.com/reactpressjs/reactpress/issues); questions → [Discussions](https://github.com/reactpressjs/reactpress/discussions); security or private/business topics → [admin@gaoredu.com](mailto:admin@gaoredu.com). Full list: [Contact](/contact).
+
+</details>
+
+<details>
+<summary><strong>Any commercialization or enterprise support plans?</strong></summary>
+
+Core stays MIT and free to self-host. Planned: Marketplace, hosting partnerships, and commercial support/custom delivery — no packaged offers page yet. Email with your use case; see [About · Commercialization plans](/about).
 
 </details>
 

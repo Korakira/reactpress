@@ -40,15 +40,24 @@ Choose a starting point by role. Every doc includes a summary and next-step link
 | **Go live**      | Operations                          | [Production deployment](./tutorial-basics/deploy-your-site.md) → [Docker](./tutorial-extras/docker-deployment.md)                                                                                           |
 | **Troubleshoot** | Hit a problem                       | [FAQ](./reference/faq.md) → [Troubleshooting](./reference/troubleshooting.md)                                                                                                                               |
 
-## Features
+## Available now (5.0)
 
-- ✍️ **Writing & content** — Create, organize, and publish from a focused editor
-- 🎨 **Themes** — Customize the look and feel. [Starter](https://github.com/reactpressjs/reactpress-theme-starter) · [Guide](./developer-guide/theme-development.md)
-- 🧩 **Plugins** — Extend ReactPress with hooks. [Guide](./developer-guide/plugin-development.md)
-- 🖥️ **Desktop app** — The same experience on the desktop. [Guide](./tutorial-extras/desktop-client.md)
-- 📱 **Multi-device** — Works on desktop, tablet, and mobile browsers
+These ship with `reactpressjs` today (not roadmap items):
 
-**ReactPress 5.0** (codename **Intelligent**) adds **AI Assist** on top of 4.0: Skills write drafts, and a person approves them in Review Inbox. See [ReactPress 5.0 Intelligent](./tutorial-extras/reactpress-5-0.md).
+| Capability                     | Status          | Notes                                                 |
+| ------------------------------ | --------------- | ----------------------------------------------------- |
+| **CLI**                        | Available       | `init` / `doctor` / `logs` / `stop` — site up in ~60s |
+| **CMS Admin**                  | Available       | Posts, pages, media, categories, tags, comments       |
+| **NestJS API**                 | Available       | Headless REST, API keys, webhooks                     |
+| **Next.js themes**             | Available       | SSR/ISR, SEO, sitemap, OG; official starter           |
+| **Plugin system**              | Available       | Hooks + `plugin.json`; built-in SEO / summary / WebP  |
+| **AI Assist**                  | Available (5.0) | Draft with your key; publish only after Review Inbox  |
+| **Desktop client**             | Available       | Electron offline writing; sync to remote API          |
+| **Docker / production deploy** | Available       | See deploy and Docker guides                          |
+
+**Later (not a product yet):** public Marketplace, managed-hosting partnerships, packaged enterprise offers — see [About · Commercialization plans](/about).
+
+Details: [ReactPress 5.0 Intelligent](./tutorial-extras/reactpress-5-0.md) · [Themes](/themes) · [Plugins](/plugins).
 
 ## Quick start
 
@@ -132,7 +141,21 @@ A self-hosted publishing platform to write, manage, and publish in one place. On
 <details>
 <summary><strong>Is ReactPress free?</strong></summary>
 
-Yes — MIT open source. Install with `npm i -g reactpressjs`.
+Yes — MIT open source. Install with `npm i -g reactpressjs`. See [About · Open source](/about).
+
+</details>
+
+<details>
+<summary><strong>Who maintains it? How do I contact you?</strong></summary>
+
+Maintained by the [reactpressjs](https://github.com/reactpressjs) GitHub org. Community: Issues / Discussions. Maintainer & business email: [admin@gaoredu.com](mailto:admin@gaoredu.com). See [Contact](/contact).
+
+</details>
+
+<details>
+<summary><strong>Any commercialization plans?</strong></summary>
+
+Core stays MIT and free to self-host. Marketplace, hosting partnerships, and commercial support/custom work are planned — no formal product page yet. See [About · Commercialization plans](/about).
 
 </details>
 

@@ -16,7 +16,17 @@ We welcome questions, bug reports, feature ideas, and contributions from the Rea
 | **GitHub Discussions** | Questions, ideas, show-and-tell                      | [github.com/reactpressjs/reactpress/discussions](https://github.com/reactpressjs/reactpress/discussions) |
 | **WeChat**             | Community updates (scan the floating QR on any page) | See the WeChat button on the right side of every page                                                    |
 | **X**                  | Product news and announcements                       | [x.com/reactpressjs](https://x.com/reactpressjs)                                                         |
-| **Email**              | Private inquiries, security reports                  | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
+| **Email**              | Private inquiries, security reports, business        | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
+
+## Community vs business
+
+| Need                                                                    | Where to go                                                                              |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Bugs, docs questions, feature ideas                                     | GitHub Issues / Discussions (table above)                                                |
+| Security vulnerability                                                  | Email only — see [Security reports](#security-reports)                                   |
+| Commercial support, custom themes/plugins, partnership, hosting inquiry | Email [admin@gaoredu.com](mailto:admin@gaoredu.com) with company, use case, and timeline |
+
+Who we are and what is planned commercially: [About ReactPress](/about).
 
 ## Before opening an issue
 

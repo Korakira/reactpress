@@ -68,7 +68,28 @@ Marketplace（远期） → 发现、安装与交易扩展产品
 
 ## 开源与许可
 
-ReactPress 由 [reactpressjs](https://github.com/reactpressjs) 维护，采用 **MIT License** 发布。官方唯一源码仓库为 **[reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)**，Issue 与贡献请提交到该仓库。
+ReactPress **开源**，采用 **MIT License**。可免费自托管，亦可商业使用、修改与分发（保留许可声明即可）。
+
+官方唯一源码仓库为 **[reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)**，Issue 与贡献请提交到该仓库。
+
+## 谁在维护？
+
+| 项目       | 说明                                                                                                                                                                 |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 维护组织   | GitHub 开源组织 **[reactpressjs](https://github.com/reactpressjs)**                                                                                                  |
+| 官网       | [reactpress.cc](https://www.reactpress.cc/)                                                                                                                          |
+| 维护者邮箱 | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                                                                                        |
+| 社区入口   | [GitHub Issues](https://github.com/reactpressjs/reactpress/issues) · [Discussions](https://github.com/reactpressjs/reactpress/discussions) · [联系我们](/zh/contact) |
+
+日常产品与文档决策在公开的 `reactpressjs` 组织进行。私人咨询或商务合作请发邮件至上述地址。
+
+## 商业化计划
+
+**当前：** 核心产品（CLI、CMS、Admin、主题、插件、桌面端）保持 **MIT 开源、可免费自托管**，没有核心付费授权。
+
+**规划中：** 生态层 — 主题/插件 **Marketplace**、可选的 **托管合作**，以及面向团队的 **商业支持 / 定制交付**（SLA、培训、主题定制等）。正式产品页尚未上线；若现在就有需求，请通过 [联系我们](/zh/contact) 询价。
+
+**原则：** 开源核心优先；付费服务（如有）围绕生态与服务，而不是把基础发布能力锁进付费墙。
 
 ## 在线演示与入口
 
