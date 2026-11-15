@@ -1,6 +1,6 @@
 {
   "name": "reactpress",
-  "version": "5.0.0-beta.0",
+  "version": "5.0.0-beta.1",
   "private": true,
   "packageManager": "pnpm@9.15.9",
   "description": "ReactPress: Write with Focus. Publish with Joy. CMS, Admin, Headless API, Next.js themes, plugins, desktop — one CLI.",
