@@ -1,8 +1,10 @@
 import { translate } from '@docusaurus/Translate';
 import Translate from '@docusaurus/Translate';
 import { IconApi, IconDesktop, IconLayers, IconPen, IconThemes } from '@site/src/components/Home/icons';
+import clsx from 'clsx';
 import React from 'react';
 
+import sectionStyles from '../section.module.css';
 import styles from './styles.module.css';
 
 type HighlightItem = {
@@ -62,35 +64,37 @@ const items: HighlightItem[] = [
 
 export default function Highlights() {
   return (
-    <section className={styles.section} aria-labelledby="home-highlights-heading">
-      <header className={styles.header}>
-        <p className={styles.eyebrow}>
-          <Translate id="home.highlights.eyebrow">What you can ship</Translate>
-        </p>
-        <h2 id="home-highlights-heading" className={styles.heading}>
-          <Translate id="home.highlights.title">What ReactPress helps you do</Translate>
-        </h2>
-        <p className={styles.subheading}>
-          <Translate id="home.highlights.subtitle">
-            From a focused blog to a headless content app — one publishing platform, your outcomes.
-          </Translate>
-        </p>
-      </header>
-      <div className={styles.grid}>
-        {items.map((item, index) => (
-          <article
-            key={item.title}
-            className={styles.card}
-            data-accent={item.accent}
-            style={{ animationDelay: `${index * 0.06}s` }}
-          >
-            <span className={styles.iconWrap} aria-hidden>
-              <item.Icon className={styles.icon} />
-            </span>
-            <h3 className={styles.cardTitle}>{item.title}</h3>
-            <p className={styles.cardDesc}>{item.description}</p>
-          </article>
-        ))}
+    <section className={sectionStyles.section} aria-labelledby="home-highlights-heading">
+      <div className={sectionStyles.inner}>
+        <header className={sectionStyles.header}>
+          <p className={sectionStyles.eyebrow}>
+            <Translate id="home.highlights.eyebrow">What you can ship</Translate>
+          </p>
+          <h2 id="home-highlights-heading" className={clsx(sectionStyles.heading, sectionStyles.fadeUp)}>
+            <Translate id="home.highlights.title">Built for real publishing outcomes</Translate>
+          </h2>
+          <p className={clsx(sectionStyles.subheading, sectionStyles.fadeUpDelay)}>
+            <Translate id="home.highlights.subtitle">
+              From a focused blog to a headless content app — pick the surface you need, keep the same core.
+            </Translate>
+          </p>
+        </header>
+        <div className={styles.grid}>
+          {items.map((item, index) => (
+            <article
+              key={item.title}
+              className={styles.item}
+              data-accent={item.accent}
+              style={{ animationDelay: `${index * 0.06}s` }}
+            >
+              <span className={styles.iconWrap} aria-hidden>
+                <item.Icon className={styles.icon} />
+              </span>
+              <h3 className={styles.itemTitle}>{item.title}</h3>
+              <p className={styles.itemDesc}>{item.description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

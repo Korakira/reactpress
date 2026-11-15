@@ -3,8 +3,10 @@ import { translate } from '@docusaurus/Translate';
 import Translate from '@docusaurus/Translate';
 import CliCommandBlock from '@site/src/components/CliCommandBlock';
 import { THEME_STARTER_DEMO_URL, THEME_STARTER_REPO_URL, VERCEL_DEPLOY_URL } from '@site/src/constants/deploy';
+import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
 
+import sectionStyles from '../section.module.css';
 import styles from './styles.module.css';
 
 type Path = 'deploy' | 'local';
@@ -105,20 +107,20 @@ export default function QuickStart() {
   return (
     <section
       id="quickstart"
-      className={styles.section}
+      className={clsx(sectionStyles.section, sectionStyles.bandB)}
       aria-labelledby="home-quickstart-heading"
       aria-label={translate({ message: 'Quick start', id: 'home.quickstart.aria' })}
     >
       <div id="quickstart-local" className={styles.localAnchor} aria-hidden />
-      <div className={styles.panel}>
-        <header className={styles.header}>
-          <p className={styles.eyebrow}>
+      <div className={sectionStyles.inner}>
+        <header className={sectionStyles.header}>
+          <p className={sectionStyles.eyebrow}>
             <Translate id="home.quickstart.eyebrow">How to start</Translate>
           </p>
-          <h2 id="home-quickstart-heading" className={styles.heading}>
+          <h2 id="home-quickstart-heading" className={clsx(sectionStyles.heading, sectionStyles.fadeUp)}>
             <Translate id="home.quickstart.title">From zero to a live site in ~60 seconds</Translate>
           </h2>
-          <p className={styles.subheading}>
+          <p className={clsx(sectionStyles.subheading, sectionStyles.fadeUpDelay)}>
             <Translate id="home.quickstart.desc">
               One-click cloud deploy, or three local commands with embedded SQLite. No Docker required.
             </Translate>

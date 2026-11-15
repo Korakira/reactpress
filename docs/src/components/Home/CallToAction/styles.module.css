@@ -2,7 +2,8 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  background: var(--home-section-bottom);
+  background: var(--home-band-b);
+  padding: var(--home-section-pad-y, 3rem) 0 calc(var(--home-section-pad-y, 3rem) + 0.75rem);
 }
 
 .wrapper::before {
@@ -33,8 +34,8 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  padding: 3.5rem 1.25rem 4.5rem;
-  max-width: 1200px;
+  padding: 0 1.25rem;
+  max-width: var(--home-section-max, 1100px);
   margin: 0 auto;
 }
 
@@ -46,15 +47,9 @@
   font-size: clamp(1.5rem, 4vw, 2.1rem);
   line-height: 1.3;
   margin: 0 0 0.5rem;
-  background: linear-gradient(120deg, var(--home-text) 30%, var(--home-button-primary));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-html[data-theme='light'] .title {
-  background: none;
-  -webkit-text-fill-color: unset;
   color: var(--home-text);
+  letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 .subtitle {
@@ -89,19 +84,34 @@ html[data-theme='light'] .title {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
-.deployButton {
+.primaryButton {
   background: linear-gradient(135deg, #087ea4 0%, #41d1ff 100%);
   color: #fff !important;
   box-shadow: 0 8px 28px rgba(8, 126, 164, 0.3);
 }
 
-.deployButton:hover {
+.primaryButton:hover {
   color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 12px 36px rgba(8, 126, 164, 0.38);
+}
+
+.deployButton {
+  color: var(--home-button-secondary-text) !important;
+  border: 1px solid var(--home-button-secondary-border);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.deployButton:hover {
+  color: var(--home-button-primary) !important;
+  border-color: var(--home-button-primary);
+  transform: translateY(-2px);
 }
 
 .deployIcon {
@@ -110,25 +120,12 @@ html[data-theme='light'] .title {
   flex-shrink: 0;
 }
 
-.primaryButton {
-  color: var(--home-button-secondary-text) !important;
-  border: 1px solid var(--home-button-secondary-border);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: none;
-}
-
-.primaryButton:hover {
-  color: var(--home-button-primary) !important;
-  border-color: var(--home-button-primary);
-  transform: translateY(-2px);
-}
-
-html[data-theme='dark'] .primaryButton {
+html[data-theme='dark'] .deployButton {
   background: rgba(255, 255, 255, 0.06);
   color: #e5e7eb !important;
 }
 
-html[data-theme='dark'] .primaryButton:hover {
+html[data-theme='dark'] .deployButton:hover {
   color: #7ddfff !important;
   border-color: rgba(65, 209, 255, 0.45);
 }
@@ -136,10 +133,5 @@ html[data-theme='dark'] .primaryButton:hover {
 @media (max-width: 600px) {
   .background {
     display: none;
-  }
-
-  .container {
-    padding-top: 2.5rem;
-    padding-bottom: 3rem;
   }
 }

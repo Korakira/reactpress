@@ -1,7 +1,6 @@
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
 import Logo from '@site/src/components/Home/Logo';
-import { VERCEL_DEPLOY_URL } from '@site/src/constants/deploy';
 import { buildGitHubReleaseTagUrl } from '@site/src/npm/packageVersions';
 import { useReactPressVersions } from '@site/src/npm/useReactPressVersions';
 import clsx from 'clsx';
@@ -10,14 +9,6 @@ import GitHubButton from 'react-github-btn';
 
 import HeroVideo from './HeroVideo';
 import styles from './styles.module.css';
-
-function VercelIcon() {
-  return (
-    <svg className={styles.deployIcon} viewBox="0 0 16 16" fill="currentColor" aria-hidden>
-      <path d="M8 1L15 14H1L8 1z" />
-    </svg>
-  );
-}
 
 function Hero() {
   const { latest } = useReactPressVersions();
@@ -85,10 +76,6 @@ function Hero() {
 
           <div className={styles.actions}>
             <div className={styles.buttonContainer}>
-              <a href={VERCEL_DEPLOY_URL} target="_blank" rel="noopener noreferrer" className={styles.deployButton}>
-                <VercelIcon />
-                <Translate id="home.hero.deploy">Deploy</Translate>
-              </a>
               <Link className={styles.primaryButton} to="/docs/getting-started/first-site">
                 <Translate id="home.hero.intro">Get Started</Translate>
               </Link>

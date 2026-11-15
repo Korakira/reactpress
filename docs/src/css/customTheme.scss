@@ -69,6 +69,10 @@
     --home-hero-grid-grid: #ced4da;
     --home-section-top: white;
     --home-section-bottom: #efeff2;
+    --home-band-a: #ffffff;
+    --home-band-b: #f4f8fa;
+    --home-section-pad-y: 3rem;
+    --home-section-max: 1100px;
     --home-secondary-text: #404756;
     --home-feature-background-1: #f1dbfc;
     --home-feature-background-2: #e1eefc;
@@ -141,6 +145,10 @@ html[data-theme="dark"] {
     --home-hero-grid-grid: #30363d;
     --home-section-top: #1b1b1d;
     --home-section-bottom: #111113;
+    --home-band-a: #1b1b1d;
+    --home-band-b: #15171b;
+    --home-section-pad-y: 3rem;
+    --home-section-max: 1100px;
     --home-secondary-text: #c0c1c4;
     --home-feature-background-1: #333049;
     --home-feature-background-2: #1c3950;

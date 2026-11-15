@@ -1,12 +1,3 @@
-.section {
-  position: relative;
-  z-index: 3;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.25rem 1.25rem 2.75rem;
-  scroll-margin-top: 5.5rem;
-}
-
 .localAnchor {
   position: absolute;
   top: 0;
@@ -14,25 +5,6 @@
   height: 1px;
   scroll-margin-top: 5.5rem;
   pointer-events: none;
-}
-
-.panel {
-  border-radius: 22px;
-  border: 1px solid var(--home-border);
-  background:
-    linear-gradient(165deg, rgba(8, 126, 164, 0.06) 0%, transparent 42%),
-    var(--home-background);
-  box-shadow: 0 16px 48px rgba(8, 126, 164, 0.08);
-  padding: 2rem 1.75rem 1.75rem;
-  animation: panelEnter 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
-}
-
-html[data-theme='dark'] .panel {
-  background:
-    linear-gradient(165deg, rgba(65, 209, 255, 0.07) 0%, transparent 45%),
-    var(--home-background);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
-  border-color: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes panelEnter {
@@ -44,42 +16,6 @@ html[data-theme='dark'] .panel {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 1.35rem;
-}
-
-.eyebrow {
-  display: inline-block;
-  margin: 0 0 0.45rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--home-button-primary);
-}
-
-html[data-theme='dark'] .eyebrow {
-  color: #7ddfff;
-}
-
-.heading {
-  font-size: clamp(1.45rem, 3.5vw, 1.9rem);
-  font-weight: 800;
-  margin: 0;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-  color: var(--home-text);
-}
-
-.subheading {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--home-secondary-text);
-  max-width: 38rem;
-  margin: 0.55rem auto 0;
 }
 
 .pathSwitch {
@@ -546,7 +482,6 @@ html[data-theme='dark'] .endpointLabel {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panel,
   .step,
   .deployPane,
   .localPane,
@@ -566,10 +501,6 @@ html[data-theme='dark'] .endpointLabel {
 
   .deployVisual {
     min-height: 120px;
-  }
-
-  .panel {
-    padding: 1.5rem 1.15rem 1.35rem;
   }
 }
 

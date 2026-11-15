@@ -29,24 +29,27 @@ html[data-theme='dark'] .homepage :global(.navbar) {
 
 .homepage :global(.main-wrapper > main) {
   overflow-x: hidden;
-}
-
-/* Soft ambient wash behind homepage sections */
-.homepage :global(.main-wrapper > main) {
   background-image:
-    radial-gradient(ellipse 70% 40% at 10% 30%, rgba(8, 126, 164, 0.04), transparent),
-    radial-gradient(ellipse 50% 35% at 90% 60%, rgba(65, 209, 255, 0.05), transparent);
+    radial-gradient(ellipse 70% 40% at 10% 30%, rgba(8, 126, 164, 0.035), transparent),
+    radial-gradient(ellipse 50% 35% at 90% 60%, rgba(65, 209, 255, 0.04), transparent);
 }
 
 html[data-theme='dark'] .homepage :global(.main-wrapper > main) {
   background-image:
-    radial-gradient(ellipse 70% 40% at 10% 30%, rgba(65, 209, 255, 0.04), transparent),
-    radial-gradient(ellipse 50% 35% at 90% 60%, rgba(8, 126, 164, 0.05), transparent);
+    radial-gradient(ellipse 70% 40% at 10% 30%, rgba(65, 209, 255, 0.035), transparent),
+    radial-gradient(ellipse 50% 35% at 90% 60%, rgba(8, 126, 164, 0.04), transparent);
 }
 
-/* Tighter vertical rhythm between homepage story sections */
-.homepage :global(.main-wrapper > main) > section + section {
-  scroll-margin-top: 5rem;
+/* Shared interactive card surface for clickable homepage tiles */
+.homepage {
+  --home-card-radius: 14px;
+  --home-card-shadow: 0 6px 28px rgba(8, 126, 164, 0.06);
+  --home-card-shadow-hover: 0 12px 36px rgba(8, 126, 164, 0.12);
+}
+
+html[data-theme='dark'] .homepage {
+  --home-card-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
+  --home-card-shadow-hover: 0 12px 36px rgba(65, 209, 255, 0.12);
 }
 
 /* Docs content reading comfort (site-wide light touch) */

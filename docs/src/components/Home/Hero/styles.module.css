@@ -386,7 +386,6 @@ html[data-theme='dark'] .versionTagLatest:hover {
   justify-content: flex-start;
 }
 
-.deployButton,
 .primaryButton,
 .secondaryButton {
   border: none;
@@ -407,85 +406,43 @@ html[data-theme='dark'] .versionTagLatest:hover {
     border-color 0.2s ease;
 }
 
-.deployButton {
-  position: relative;
-  overflow: hidden;
+.primaryButton {
   background: linear-gradient(135deg, #087ea4 0%, #41d1ff 100%);
   color: #fff !important;
   padding: 13px 26px;
   font-size: 0.98rem;
   box-shadow: 0 6px 22px rgba(8, 126, 164, 0.34);
+  border: none;
 }
 
-.deployButton::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.28) 45%, transparent 65%);
-  transform: translateX(-120%);
-  animation: deployShimmer 3.6s ease-in-out infinite;
-}
-
-.deployButton:hover {
+.primaryButton:hover {
   color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(8, 126, 164, 0.42);
 }
 
-.deployIcon {
-  width: 0.85rem;
-  height: 0.85rem;
-  flex-shrink: 0;
-}
-
-@keyframes deployShimmer {
-  0%,
-  55% {
-    transform: translateX(-120%);
-  }
-  80%,
-  100% {
-    transform: translateX(120%);
-  }
-}
-
-.primaryButton {
+.secondaryButton {
   color: var(--home-button-secondary-text) !important;
   border: 1px solid var(--home-button-secondary-border);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
 }
 
-.primaryButton:hover {
+.secondaryButton:hover {
   transform: translateY(-2px);
   border-color: var(--home-button-primary);
   color: var(--home-button-primary) !important;
 }
 
-html[data-theme='dark'] .primaryButton {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.secondaryButton {
-  color: var(--home-button-primary) !important;
-  background: transparent;
-  border: 1px solid rgba(8, 126, 164, 0.28);
-}
-
-.secondaryButton:hover {
-  transform: translateY(-2px);
-  background: rgba(8, 126, 164, 0.08);
-  border-color: rgba(8, 126, 164, 0.45);
-}
-
 html[data-theme='dark'] .secondaryButton {
-  color: #7ddfff !important;
-  border-color: rgba(65, 209, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e7eb !important;
 }
 
 html[data-theme='dark'] .secondaryButton:hover {
-  background: rgba(65, 209, 255, 0.08);
+  color: #7ddfff !important;
   border-color: rgba(65, 209, 255, 0.45);
+  background: rgba(65, 209, 255, 0.08);
 }
 
 .localHint {

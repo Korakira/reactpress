@@ -5,6 +5,7 @@ import Highlights from '@site/src/components/Home/Highlights';
 import Platform from '@site/src/components/Home/Platform';
 import Proof from '@site/src/components/Home/Proof';
 import QuickStart from '@site/src/components/Home/QuickStart';
+import Showcase from '@site/src/components/Home/Showcase';
 import React from 'react';
 
 export default function Home() {
@@ -12,9 +13,10 @@ export default function Home() {
     <>
       <Hero />
       <Platform />
-      <QuickStart />
       <Highlights />
+      <QuickStart />
       <Proof />
+      <Showcase />
       <Ecosystem />
       <CallToAction />
     </>

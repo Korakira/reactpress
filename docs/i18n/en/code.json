@@ -590,7 +590,7 @@
     "message": "Deploy"
   },
   "home.call.subtitle": {
-    "message": "Deploy in one click, explore the docs, or open a Live Demo and feel the stack."
+    "message": "Start with the docs, or deploy a theme when you are ready to ship."
   },
   "home.cli.terminal.aria": {
     "message": "ReactPress quick start command demo"
@@ -599,10 +599,10 @@
     "message": "What you can ship"
   },
   "home.highlights.title": {
-    "message": "What ReactPress helps you do"
+    "message": "Built for real publishing outcomes"
   },
   "home.highlights.subtitle": {
-    "message": "From a focused blog to a headless content app — one publishing platform, your outcomes."
+    "message": "From a focused blog to a headless content app — pick the surface you need, keep the same core."
   },
   "home.highlight.writing.title": {
     "message": "Blogs that rank"
@@ -635,13 +635,13 @@
     "message": "REST APIs, keys, and webhooks — feed any React client while Admin stays the source of truth."
   },
   "home.proof.eyebrow": {
-    "message": "See it in action"
+    "message": "Performance"
   },
   "home.proof.title": {
     "message": "Built for readers — and for SEO"
   },
   "home.proof.subtitle": {
-    "message": "SSR themes ship with solid Core Web Vitals. Open a Live Demo or theme preview when you want to click around."
+    "message": "SSR themes ship with solid Core Web Vitals so content is fast to load and ready to rank."
   },
   "home.proof.desktop": {
     "message": "Desktop — the same publishing experience, locally."
@@ -655,6 +655,43 @@
   "home.proof.themeDemo": {
     "message": "Theme Demo"
   },
+  "home.showcase.eyebrow": {
+    "message": "Sites"
+  },
+  "home.showcase.title": {
+    "message": "Sites powered by ReactPress"
+  },
+  "home.showcase.subtitle": {
+    "message": "Official dogfood and theme demo today — community sites after a short review."
+  },
+  "home.showcase.badge.dogfood": {
+    "message": "Official dogfood"
+  },
+  "home.showcase.badge.themeDemo": {
+    "message": "Theme demo"
+  },
+  "home.showcase.badge.community": {
+    "message": "Community"
+  },
+  "home.showcase.gaoredu.title": {
+    "message": "gaoredu.com"
+  },
+  "home.showcase.gaoredu.desc": {
+    "message": "Maintainer production site — content, theme, and SEO running on ReactPress day to day."
+  },
+  "home.showcase.themeStarter.title": {
+    "message": "Theme Starter"
+  },
+  "home.showcase.themeStarter.desc": {
+    "message": "Official Next.js starter live — search, comments, knowledge base layout, and SSR SEO patterns."
+  },
+  "home.showcase.submit": {
+    "message": "Submit your site"
+  },
+  "home.showcase.submitHint": {
+    "message": "Open the GitHub issue with your URL, use case, and a one-line story. We review before listing."
+  },
+
   "复制命令，立即开始": {
     "message": "Copy commands to get started"
   },
@@ -728,7 +765,7 @@
     "message": "Write. Manage. Publish."
   },
   "home.platform.subtitle": {
-    "message": "ReactPress ends the publishing tax — one CLI starts CMS, Admin, theme, and plugins so you can ship content without stitching five tools together."
+    "message": "One CLI starts CMS, Admin, theme, and plugins — a full publishing stack without stitching five tools together."
   },
   "home.platform.build.title": {
     "message": "Write"
@@ -773,7 +810,7 @@
     "message": "Themes, plugins, and guides — one hub"
   },
   "home.ecosystem.subtitle": {
-    "message": "Themes, plugins, templates, and guides — extend the core when you need more."
+    "message": "Extend the core when you need more — themes, plugins, templates, and guides in one place."
   },
   "home.ecosystem.themes.title": {
     "message": "Themes"

@@ -243,7 +243,7 @@
     "message": "Deploy"
   },
   "home.call.subtitle": {
-    "message": "一键部署、阅读文档，或打开在线演示亲自体验。"
+    "message": "从文档开始，需要上线时再一键部署主题。"
   },
   "home.cli.running": {
     "message": "运行中"
@@ -279,10 +279,10 @@
     "message": "你能交付什么"
   },
   "home.highlights.title": {
-    "message": "它能帮你做什么"
+    "message": "面向真实发布结果"
   },
   "home.highlights.subtitle": {
-    "message": "从专注的博客到 Headless 内容应用 — 一个发布平台，对应你的成果。"
+    "message": "从专注博客到 Headless 内容应用 — 选你需要的表层，核心始终一致。"
   },
   "home.highlight.writing.title": {
     "message": "能被检索的博客"
@@ -315,13 +315,13 @@
     "message": "REST API、访问密钥与 Webhook — 任意 React 客户端消费内容，Admin 仍是真相源。"
   },
   "home.proof.eyebrow": {
-    "message": "实际效果"
+    "message": "性能"
   },
   "home.proof.title": {
     "message": "为读者而生 — 也为 SEO 而生"
   },
   "home.proof.subtitle": {
-    "message": "SSR 主题自带扎实的 Core Web Vitals。想动手点点看，打开在线演示或主题预览即可。"
+    "message": "SSR 主题自带扎实的 Core Web Vitals，内容加载快，也更容易被检索。"
   },
   "home.proof.desktop": {
     "message": "桌面端 — 同样的发布体验，本地可用。"
@@ -335,6 +335,43 @@
   "home.proof.themeDemo": {
     "message": "主题演示"
   },
+  "home.showcase.eyebrow": {
+    "message": "站点"
+  },
+  "home.showcase.title": {
+    "message": "用 ReactPress 跑起来的站点"
+  },
+  "home.showcase.subtitle": {
+    "message": "先放官方 dogfood 与主题演示；社区站点经简短审核后加入。"
+  },
+  "home.showcase.badge.dogfood": {
+    "message": "官方 Dogfood"
+  },
+  "home.showcase.badge.themeDemo": {
+    "message": "主题演示"
+  },
+  "home.showcase.badge.community": {
+    "message": "社区"
+  },
+  "home.showcase.gaoredu.title": {
+    "message": "gaoredu.com"
+  },
+  "home.showcase.gaoredu.desc": {
+    "message": "维护者生产站 — 日常内容、主题与 SEO 都跑在 ReactPress 上。"
+  },
+  "home.showcase.themeStarter.title": {
+    "message": "Theme Starter"
+  },
+  "home.showcase.themeStarter.desc": {
+    "message": "官方 Next.js 起步主题在线演示 — 搜索、评论、知识库布局与 SSR SEO 模式。"
+  },
+  "home.showcase.submit": {
+    "message": "投稿你的站点"
+  },
+  "home.showcase.submitHint": {
+    "message": "在 GitHub Issue 里留下 URL、用途与一句话故事。我们审核后再上榜。"
+  },
+
   "home.highlight.zero.title": {
     "message": "零配置起站"
   },
@@ -360,7 +397,7 @@
     "message": "写作 · 管理 · 发布"
   },
   "home.platform.subtitle": {
-    "message": "ReactPress 拿掉「发布税」— 一条 CLI 拉起 CMS、后台、主题与插件，不必再拼五套工具才能发出内容。"
+    "message": "一条 CLI 拉起 CMS、后台、主题与插件 — 完整发布栈，不必再拼五套工具。"
   },
   "home.platform.build.title": {
     "message": "写作"
@@ -405,7 +442,7 @@
     "message": "主题、插件与指南 — 统一入口"
   },
   "home.ecosystem.subtitle": {
-    "message": "主题、插件、模板与指南 — 需要时再扩展核心能力。"
+    "message": "需要时再扩展核心 — 主题、插件、模板与指南集中在一处。"
   },
   "home.ecosystem.themes.title": {
     "message": "主题"

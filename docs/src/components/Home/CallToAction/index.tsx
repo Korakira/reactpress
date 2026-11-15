@@ -24,18 +24,18 @@ function CallToAction() {
           </h2>
           <p className={styles.subtitle}>
             <Translate id="home.call.subtitle">
-              Deploy in one click, explore the docs, or open a Live Demo and feel the stack.
+              Start with the docs, or deploy a theme when you are ready to ship.
             </Translate>
           </p>
         </header>
         <div className={styles.footerCta}>
+          <Link className={styles.primaryButton} to="/docs/intro">
+            <Translate id="home.call.cta">Explore the full documentation</Translate>
+          </Link>
           <a className={styles.deployButton} href={VERCEL_DEPLOY_URL} target="_blank" rel="noopener noreferrer">
             <VercelIcon />
             <Translate id="home.call.deploy">Deploy</Translate>
           </a>
-          <Link className={styles.primaryButton} to="/docs/intro">
-            <Translate id="home.call.cta">Explore the full documentation</Translate>
-          </Link>
         </div>
       </div>
     </div>

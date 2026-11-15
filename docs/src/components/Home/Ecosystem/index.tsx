@@ -2,8 +2,10 @@ import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import Translate from '@docusaurus/Translate';
 import { IconDesktop, IconPlugins, IconRocket, IconThemes } from '@site/src/components/Home/icons';
+import clsx from 'clsx';
 import React from 'react';
 
+import sectionStyles from '../section.module.css';
 import styles from './styles.module.css';
 
 type HubItem = {
@@ -12,7 +14,6 @@ type HubItem = {
   description: string;
   to: string;
   cta: string;
-  accent: 'themes' | 'plugins' | 'templates' | 'guides';
 };
 
 const items: HubItem[] = [
@@ -25,7 +26,6 @@ const items: HubItem[] = [
     }),
     to: '/themes',
     cta: translate({ message: 'Explore themes', id: 'home.ecosystem.themes.cta' }),
-    accent: 'themes',
   },
   {
     Icon: IconPlugins,
@@ -36,7 +36,6 @@ const items: HubItem[] = [
     }),
     to: '/plugins',
     cta: translate({ message: 'Explore plugins', id: 'home.ecosystem.plugins.cta' }),
-    accent: 'plugins',
   },
   {
     Icon: IconRocket,
@@ -47,7 +46,6 @@ const items: HubItem[] = [
     }),
     to: '/themes/#templates',
     cta: translate({ message: 'Browse templates', id: 'home.ecosystem.templates.cta' }),
-    accent: 'templates',
   },
   {
     Icon: IconDesktop,
@@ -58,43 +56,38 @@ const items: HubItem[] = [
     }),
     to: '/best-practices',
     cta: translate({ message: 'Read guides', id: 'home.ecosystem.guides.cta' }),
-    accent: 'guides',
   },
 ];
 
 export default function Ecosystem() {
   return (
-    <section className={styles.section} aria-labelledby="home-ecosystem-heading">
-      <header className={styles.header}>
-        <p className={styles.eyebrow}>
-          <Translate id="home.ecosystem.eyebrow">Ecosystem</Translate>
-        </p>
-        <h2 id="home-ecosystem-heading" className={styles.heading}>
-          <Translate id="home.ecosystem.title">Themes, plugins, and guides — one hub</Translate>
-        </h2>
-        <p className={styles.subheading}>
-          <Translate id="home.ecosystem.subtitle">
-            Themes, plugins, templates, and guides — extend the core when you need more.
-          </Translate>
-        </p>
-      </header>
-      <div className={styles.grid}>
-        {items.map((item, index) => (
-          <Link
-            key={item.to}
-            className={styles.card}
-            to={item.to}
-            data-accent={item.accent}
-            style={{ animationDelay: `${index * 0.06}s` }}
-          >
-            <span className={styles.iconWrap} aria-hidden>
-              <item.Icon className={styles.icon} />
-            </span>
-            <h3 className={styles.cardTitle}>{item.title}</h3>
-            <p className={styles.cardDesc}>{item.description}</p>
-            <span className={styles.cta}>{item.cta}</span>
-          </Link>
-        ))}
+    <section className={sectionStyles.section} aria-labelledby="home-ecosystem-heading">
+      <div className={sectionStyles.inner}>
+        <header className={sectionStyles.header}>
+          <p className={sectionStyles.eyebrow}>
+            <Translate id="home.ecosystem.eyebrow">Ecosystem</Translate>
+          </p>
+          <h2 id="home-ecosystem-heading" className={clsx(sectionStyles.heading, sectionStyles.fadeUp)}>
+            <Translate id="home.ecosystem.title">Themes, plugins, and guides — one hub</Translate>
+          </h2>
+          <p className={clsx(sectionStyles.subheading, sectionStyles.fadeUpDelay)}>
+            <Translate id="home.ecosystem.subtitle">
+              Extend the core when you need more — themes, plugins, templates, and guides in one place.
+            </Translate>
+          </p>
+        </header>
+        <div className={styles.grid}>
+          {items.map((item, index) => (
+            <Link key={item.to} className={styles.card} to={item.to} style={{ animationDelay: `${index * 0.06}s` }}>
+              <span className={styles.iconWrap} aria-hidden>
+                <item.Icon className={styles.icon} />
+              </span>
+              <h3 className={styles.cardTitle}>{item.title}</h3>
+              <p className={styles.cardDesc}>{item.description}</p>
+              <span className={styles.cta}>{item.cta}</span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
