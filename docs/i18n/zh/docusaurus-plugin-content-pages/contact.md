@@ -15,7 +15,7 @@ keywords: [reactpress, 联系, 支持, github issues]
 | **GitHub Issues**      | Bug、可复现问题                | [github.com/reactpressjs/reactpress/issues](https://github.com/reactpressjs/reactpress/issues)           |
 | **GitHub Discussions** | 提问、想法、展示               | [github.com/reactpressjs/reactpress/discussions](https://github.com/reactpressjs/reactpress/discussions) |
 | **微信**               | 社区动态（任意页面右侧可扫码） | 见页面右侧浮动「微信」按钮                                                                               |
-| **X**                  | 产品动态与公告                 | [x.com/reactpre](https://x.com/reactpre)                                                                 |
+| **X**                  | 产品动态与公告                 | [x.com/reactpressjs](https://x.com/reactpressjs)                                                         |
 | **邮件**               | 私人咨询、安全报告             | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
 
 ## 提交 Issue 前
@@ -40,5 +40,5 @@ keywords: [reactpress, 联系, 支持, github issues]
 - [官网](https://www.reactpress.cc/) · [文档首页](/zh/docs/intro)
 - [关于 ReactPress](/zh/about)
 - [GitHub](https://github.com/reactpressjs) · [源码仓库](https://github.com/reactpressjs/reactpress)
-- [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
+- [X](https://x.com/reactpressjs) · [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
 - [在线演示](https://demo.reactpress.cc/)

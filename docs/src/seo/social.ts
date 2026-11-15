@@ -7,7 +7,7 @@ export const SOCIAL_CARD = {
   alt: 'ReactPress — Write with Focus. Publish with Joy.',
 } as const;
 
-export const TWITTER_SITE = '@reactpre';
+export const TWITTER_SITE = '@reactpressjs';
 
 export function absoluteUrl(siteUrl: string, pathname = '/'): string {
   const base = siteUrl.replace(/\/$/, '');

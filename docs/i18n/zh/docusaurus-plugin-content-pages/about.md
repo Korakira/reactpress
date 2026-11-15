@@ -21,6 +21,7 @@ keywords: [reactpress, 关于, 开源, 自托管发布平台, react cms]
 | 官网     | [reactpress.cc](https://www.reactpress.cc/)                                           |
 | GitHub   | [github.com/reactpressjs](https://github.com/reactpressjs)                            |
 | 源码仓库 | [reactpressjs/reactpress](https://github.com/reactpressjs/reactpress)（官方唯一仓库） |
+| X        | [x.com/reactpressjs](https://x.com/reactpressjs)                                      |
 | npm      | [npmjs.com/~reactpressjs](https://www.npmjs.com/~reactpressjs)                        |
 | 产品品类 | 自托管发布平台                                                                        |
 | 核心用户 | 创作者、React 开发者、独立开发者、站长                                                |
@@ -73,7 +74,7 @@ ReactPress 由 [reactpressjs](https://github.com/reactpressjs) 维护，采用 *
 
 - [官网](https://www.reactpress.cc/) · [文档](/zh/docs/intro)
 - [GitHub](https://github.com/reactpressjs) · [源码仓库](https://github.com/reactpressjs/reactpress)
-- [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
+- [X](https://x.com/reactpressjs) · [npm](https://www.npmjs.com/~reactpressjs) · [CLI 包](https://www.npmjs.com/package/@reactpressjs/reactpress)
 - [在线演示](https://demo.reactpress.cc/) — ReactPress 驱动的生产站点
 - [主题](/zh/themes) · [插件](/zh/plugins) · [最佳实践](/zh/best-practices) · [更新日志](/zh/blog/changelog)
 

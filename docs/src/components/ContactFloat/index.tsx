@@ -4,7 +4,7 @@ import React, { useEffect, useId, useState } from 'react';
 
 import styles from './styles.module.css';
 
-const X_URL = 'https://x.com/reactpre';
+const X_URL = 'https://x.com/reactpressjs';
 const EMAIL = 'admin@gaoredu.com';
 
 function WeChatIcon() {

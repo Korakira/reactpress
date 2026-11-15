@@ -21,6 +21,7 @@ keywords: [reactpress, about, open source, self-hosted publishing, react cms]
 | Site         | [reactpress.cc](https://www.reactpress.cc/)                                      |
 | GitHub       | [github.com/reactpressjs](https://github.com/reactpressjs)                       |
 | Source repo  | [reactpressjs/reactpress](https://github.com/reactpressjs/reactpress) (official) |
+| X            | [x.com/reactpressjs](https://x.com/reactpressjs)                                 |
 | npm          | [npmjs.com/~reactpressjs](https://www.npmjs.com/~reactpressjs)                   |
 | Category     | Self-hosted publishing platform                                                  |
 | Core users   | Creators, React developers, indie builders, site owners                          |
@@ -73,7 +74,7 @@ ReactPress is developed by [reactpressjs](https://github.com/reactpressjs) and r
 
 - [Official site](https://www.reactpress.cc/) · [Documentation](/docs/intro)
 - [GitHub](https://github.com/reactpressjs) · [Source repo](https://github.com/reactpressjs/reactpress)
-- [npm](https://www.npmjs.com/~reactpressjs) · [CLI package](https://www.npmjs.com/package/@reactpressjs/reactpress)
+- [X](https://x.com/reactpressjs) · [npm](https://www.npmjs.com/~reactpressjs) · [CLI package](https://www.npmjs.com/package/@reactpressjs/reactpress)
 - [Live demo](https://demo.reactpress.cc/) — production site powered by ReactPress
 - [Themes](/themes) · [Plugins](/plugins) · [Best practices](/best-practices) · [Changelog](/blog/changelog)
 

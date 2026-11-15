@@ -256,7 +256,7 @@ const config: Config = {
             },
             {
               label: 'X',
-              href: 'https://x.com/reactpre',
+              href: 'https://x.com/reactpressjs',
             },
             {
               label: 'Blog',

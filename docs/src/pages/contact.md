@@ -15,7 +15,7 @@ We welcome questions, bug reports, feature ideas, and contributions from the Rea
 | **GitHub Issues**      | Bugs, reproducible problems                          | [github.com/reactpressjs/reactpress/issues](https://github.com/reactpressjs/reactpress/issues)           |
 | **GitHub Discussions** | Questions, ideas, show-and-tell                      | [github.com/reactpressjs/reactpress/discussions](https://github.com/reactpressjs/reactpress/discussions) |
 | **WeChat**             | Community updates (scan the floating QR on any page) | See the WeChat button on the right side of every page                                                    |
-| **X**                  | Product news and announcements                       | [x.com/reactpre](https://x.com/reactpre)                                                                 |
+| **X**                  | Product news and announcements                       | [x.com/reactpressjs](https://x.com/reactpressjs)                                                         |
 | **Email**              | Private inquiries, security reports                  | [admin@gaoredu.com](mailto:admin@gaoredu.com)                                                            |
 
 ## Before opening an issue
@@ -40,5 +40,5 @@ Pull requests are welcome on [GitHub](https://github.com/reactpressjs/reactpress
 - [Official site](https://www.reactpress.cc/) · [Documentation](/docs/intro)
 - [About ReactPress](/about)
 - [GitHub](https://github.com/reactpressjs) · [Source repo](https://github.com/reactpressjs/reactpress)
-- [npm](https://www.npmjs.com/~reactpressjs) · [CLI package](https://www.npmjs.com/package/@reactpressjs/reactpress)
+- [X](https://x.com/reactpressjs) · [npm](https://www.npmjs.com/~reactpressjs) · [CLI package](https://www.npmjs.com/package/@reactpressjs/reactpress)
 - [Live demo](https://demo.reactpress.cc/)
