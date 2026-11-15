@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { runSync, runNodeScript, resolveCliScript } = require('./spawn');
+const { runNodeScript, resolveCliScript } = require('./spawn');
 const { getThemeBin, resolveProjectRoot } = require('./paths');
 const {
   readActiveThemeManifest,
@@ -12,6 +12,8 @@ const {
 const { t } = require('./i18n');
 const { resolveBuildNodeEnv } = require('./prod-memory');
 const { shouldHonorThemePreviewFrame } = require('./theme-preview-frame');
+const { resolveSelfHostedAdminModeEnv } = require('../core/services/admin-static');
+const { runQuietThemeBuild } = require('./dev-child-io');
 
 function resolveProductionThemeEnv(projectRoot, themeDir) {
   const nginxEntry = (
@@ -49,6 +51,8 @@ function resolveProductionThemeEnv(projectRoot, themeDir) {
     NEXT_PUBLIC_REACTPRESS_API_URL: publicApiUrl,
     NEXT_PUBLIC_REACTPRESS_ADMIN_URL:
       process.env.NEXT_PUBLIC_REACTPRESS_ADMIN_URL || `${nginxEntry}/admin`,
+    // Self-hosted: serve public/admin instead of proxying to Vite :3000.
+    ...resolveSelfHostedAdminModeEnv(process.env),
   };
 }
 
@@ -290,19 +294,24 @@ function doBuildThemeSync(
   const buildingKey =
     logPrefix === 'themePreview' ? 'themePreview.building' : 'themeProd.building';
   console.log(`[reactpress] ${t(buildingKey, { id: themeId })}`);
-  runSync('pnpm', ['run', 'build'], {
+  const buildResult = runQuietThemeBuild('pnpm', ['run', 'build'], {
     cwd: themeDir,
-    stdio: ['ignore', 'inherit', 'inherit'],
     env: resolveBuildNodeEnv({
       ...resolveProductionThemeEnv(projectRoot, themeDir),
       NEXT_DIST_DIR: buildDistDir,
       CI: '1',
+      NEXT_TELEMETRY_DISABLED: '1',
       ...(logPrefix === 'themeProd' ? { REACTPRESS_BUILD_ACTIVE: '1' } : {}),
       ...(shouldHonorThemePreviewFrame() || logPrefix === 'themePreview'
         ? { REACTPRESS_HONOR_PREVIEW: '1' }
         : {}),
     }),
   });
+  if (buildResult.status !== 0) {
+    const err = new Error(t('spawn.commandFailed', { command: 'pnpm', code: buildResult.status ?? 1 }));
+    err.exitCode = buildResult.status ?? 1;
+    throw err;
+  }
   if (shouldHonorThemePreviewFrame() || logPrefix === 'themePreview') {
     const { stripBakedFrameOptionsFromBuild } = require('./theme-preview-frame');
     stripBakedFrameOptionsFromBuild(themeDir, buildDistDir);

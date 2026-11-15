@@ -97,7 +97,7 @@ const MOCK_THEMES: MockTheme[] = [
 const MOCK_CATALOG_THEME: MockTheme = {
   id: "reactpress-theme-starter",
   name: "ReactPress Theme Starter",
-  version: "1.0.0-beta.0",
+  version: "1.0.0-beta.1",
   description: "Official Next.js 15 theme with Tailwind CSS.",
   author: "ReactPress",
   tags: ["official", "Tailwind"],
@@ -107,7 +107,7 @@ const MOCK_CATALOG_THEME: MockTheme = {
   official: true,
   coverUrl: "/api/extension/themes/reactpress-theme-starter/cover",
   catalog: {
-    npm: "@reactpressjs/reactpress-theme-starter@1.0.0-beta.0",
+    npm: "@reactpressjs/reactpress-theme-starter@1.0.0-beta.1",
     featured: true,
     themeUri: "https://github.com/reactpressjs/reactpress-theme-starter",
   },
@@ -129,7 +129,7 @@ function mockThemeList(): MockTheme[] {
         active: MOCK_CATALOG_THEME.id === themeState.activeTheme,
         npm: {
           spec: MOCK_CATALOG_THEME.catalog!.npm,
-          resolvedVersion: "1.0.0-beta.0",
+          resolvedVersion: "1.0.0-beta.1",
         },
       },
     ];

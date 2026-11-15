@@ -8,6 +8,19 @@ function getCliPackageRoot(): string {
   return path.join(__dirname, '..', '..', '..');
 }
 
+/**
+ * Self-hosted init/prod runs the theme on :3001 only — there is no Vite Admin on :3000.
+ * Theme-starter defaults to proxying `/admin` → :3000 (`REACTPRESS_EMBED_ADMIN`), which
+ * yields 500 / wrong upstream (e.g. Remotion Studio) after `reactpress init`.
+ * Force static SPA under `public/admin` unless the caller already set the flags.
+ */
+export function resolveSelfHostedAdminModeEnv(env: NodeJS.ProcessEnv = process.env): Record<string, string> {
+  return {
+    REACTPRESS_EMBED_ADMIN: env.REACTPRESS_EMBED_ADMIN ?? '0',
+    REACTPRESS_BUNDLE_ADMIN: env.REACTPRESS_BUNDLE_ADMIN ?? '1',
+  };
+}
+
 export function resolveBundledAdminDistDir(): string | null {
   const bundled = path.join(getCliPackageRoot(), 'admin-dist', 'index.html');
   return fs.existsSync(bundled) ? path.dirname(bundled) : null;
@@ -91,6 +104,17 @@ export function ensureAdminRewritesInNextConfig(themeDir: string): boolean {
   let src = fs.readFileSync(configPath, 'utf8');
   if (src.includes(ADMIN_REWRITES_MARKER)) return false;
 
+  // theme-starter / embed-admin: object-form rewrites; CLI sets REACTPRESS_EMBED_ADMIN=0
+  // + REACTPRESS_BUNDLE_ADMIN=1 so createBundledAdminFallbackRewrites serves public/admin.
+  if (
+    src.includes('createBundledAdminFallbackRewrites') ||
+    src.includes('createAdminVercelRewrites') ||
+    src.includes('createLocalAdminRewrites') ||
+    src.includes('embed-admin')
+  ) {
+    return false;
+  }
+
   const arrayReturn = /async rewrites\(\)\s*\{\s*return (\[[\s\S]*?\])\s*\}/m.exec(src);
   if (!arrayReturn) {
     console.warn('[ReactPress Client] Could not patch next.config rewrites() for admin SPA');
@@ -172,12 +196,46 @@ export function ensureAdminStaticForTheme(projectRoot: string, themeDir: string)
   return false;
 }
 
+/**
+ * Next bakes `rewrites()` into `.next/routes-manifest.json` at build time.
+ * Builds made with theme-starter embed-admin still proxy `/admin` → `:3000` even after
+ * runtime env flips to bundled static — those builds must be rebuilt.
+ */
+export function themeBuildHasEmbeddedAdminProxy(themeDir: string, distDir = '.next'): boolean {
+  const manifestPath = path.join(themeDir, distDir, 'routes-manifest.json');
+  if (!fs.existsSync(manifestPath)) return false;
+  try {
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as {
+      rewrites?: {
+        beforeFiles?: Array<{ source?: string; destination?: string }>;
+        afterFiles?: Array<{ source?: string; destination?: string }>;
+        fallback?: Array<{ source?: string; destination?: string }>;
+      };
+    };
+    const groups = [
+      ...(manifest.rewrites?.beforeFiles ?? []),
+      ...(manifest.rewrites?.afterFiles ?? []),
+      ...(manifest.rewrites?.fallback ?? []),
+    ];
+    return groups.some((rule) => {
+      const source = String(rule.source || '');
+      const destination = String(rule.destination || '');
+      if (!source.includes('/admin')) return false;
+      return /^https?:\/\//i.test(destination);
+    });
+  } catch {
+    return false;
+  }
+}
+
 export function shouldRebuildThemeAfterAdminSync(themeDir: string): boolean {
   const adminIndex = path.join(themeDir, 'public', 'admin', 'index.html');
   const nextDir = path.join(themeDir, '.next');
   const configPath = path.join(themeDir, 'next.config.js');
   if (!fs.existsSync(adminIndex)) return false;
   if (!fs.existsSync(nextDir)) return true;
+
+  if (themeBuildHasEmbeddedAdminProxy(themeDir)) return true;
 
   const adminMtime = fs.statSync(adminIndex).mtimeMs;
   const nextMtime = fs.statSync(nextDir).mtimeMs;

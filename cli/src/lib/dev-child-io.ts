@@ -1,5 +1,5 @@
 // @ts-nocheck
-const { spawn } = require('child_process');
+const { spawn, spawnSync } = require('child_process');
 
 const DEV_OUTPUT_NOISE = [
   /^>/,
@@ -26,6 +26,39 @@ const DEV_OUTPUT_NOISE = [
   /^\s*➜\s+Network:/,
   /^\s*➜\s+Local:/,
   /^\s*➜\s+press h \+/,
+  // Next.js banners (build / start) — keep ReactPress-facing logs only
+  /^▲\s*Next\.js/,
+  /^Next\.js\s+\d/,
+  /^- Environments:/,
+  /^- Experiments/,
+  /^Experiments \(use with caution\)/,
+  /^·\s+\w/,
+  /^⨯\s+\w/,
+  /^Creating an optimized production build/,
+  /^Compiled (successfully|in )/,
+  /^Linting and checking/,
+  /^Collecting page data/,
+  /^Generating static pages/,
+  /^Finalizing page optimization/,
+  /^Collecting build traces/,
+  /^Route \(app\)/,
+  /^Route \(pages\)/,
+  /^First Load JS/,
+  /^Size\s+First Load JS/,
+  /^┌/,
+  /^├/,
+  /^└/,
+  /^○\s/,
+  /^ƒ\s/,
+  /^λ\s/,
+  /^✓\s+(Starting|Ready|Compiled)/,
+  /^- Local:/,
+  /^- Network:/,
+  /^Local:/,
+  /^Network:/,
+  /^Middleware/,
+  /^✨\s*Done in/,
+  /^Done in \d/,
 ];
 
 function isDevOutputQuiet() {
@@ -77,7 +110,36 @@ function spawnDevChild(command, args, options = {}) {
   return child;
 }
 
+/**
+ * Run a theme production build quietly (hide Next.js / package-manager noise).
+ * On failure, dump the captured output. Set REACTPRESS_DEV_VERBOSE=1 to inherit stdio.
+ */
+function runQuietThemeBuild(command, args, options = {}) {
+  if (!isDevOutputQuiet()) {
+    return spawnSync(command, args, {
+      ...options,
+      stdio: options.stdio ?? 'inherit',
+    });
+  }
+
+  const result = spawnSync(command, args, {
+    ...options,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+
+  if (result.status !== 0) {
+    const combined = `${result.stdout || ''}${result.stderr || ''}`.trim();
+    if (combined) {
+      process.stderr.write(`${combined}\n`);
+    }
+  }
+
+  return result;
+}
+
 module.exports = {
   isDevOutputQuiet,
   spawnDevChild,
+  runQuietThemeBuild,
 };

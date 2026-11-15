@@ -14,9 +14,9 @@ function writeActiveThemeManifest(projectRoot: string, themeId: string, themeDir
         updatedAt: new Date().toISOString(),
       },
       null,
-      2,
+      2
     ),
-    'utf8',
+    'utf8'
   );
 }
 
@@ -56,11 +56,12 @@ export async function ensureDefaultTheme(projectRoot: string): Promise<EnsureDef
         name: featured.name ?? result.themeId,
         id: result.themeId,
         dir: path.relative(root, result.themeDir),
-      }),
+      })
     );
     return { installed: true, themeId: result.themeId };
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
+    console.error(t('themeInstall.failed', { spec: featured.npm, message }));
     return { installed: false, error: message };
   }
 }

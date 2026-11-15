@@ -15,9 +15,11 @@ const { resolvePm2Bin } = require('../lib/pm2-runtime');
 const { readActiveThemeManifest } = require('../lib/theme-runtime');
 const {
   ensureAdminStaticForTheme,
+  resolveSelfHostedAdminModeEnv,
   shouldRebuildThemeAfterAdminSync,
 } = require('../core/services/admin-static');
 const { patchThemeApiProxyRoute } = require('../lib/theme-api-proxy-patch');
+const { runQuietThemeBuild, spawnDevChild } = require('../lib/dev-child-io');
 
 const originalCwd = process.env.REACTPRESS_ORIGINAL_CWD || process.cwd();
 const args = process.argv.slice(2);
@@ -25,9 +27,7 @@ const usePM2 = args.includes('--pm2');
 const useBackground = args.includes('--bg');
 const usePm2Background = args.includes('--pm2-bg');
 
-const clientDir = process.env.REACTPRESS_THEME_DIR
-  ? path.resolve(process.env.REACTPRESS_THEME_DIR)
-  : null;
+const clientDir = process.env.REACTPRESS_THEME_DIR ? path.resolve(process.env.REACTPRESS_THEME_DIR) : null;
 
 if (!clientDir || !fs.existsSync(path.join(clientDir, 'package.json'))) {
   console.error('[ReactPress Client] REACTPRESS_THEME_DIR must point to a theme package');
@@ -61,12 +61,20 @@ function ensureBuilt() {
     !hasUsableProductionBuild(clientDir, themeId);
   if (!needsRebuild) return;
   console.log('[ReactPress Client] Client not built yet. Building…');
-  const build = spawnSync('pnpm', ['run', 'build'], {
-    stdio: 'inherit',
+  const build = runQuietThemeBuild('pnpm', ['run', 'build'], {
     cwd: clientDir,
-    env: resolveBuildNodeEnv({ ...process.env, REACTPRESS_BUILD_ACTIVE: '1' }),
+    env: resolveBuildNodeEnv({
+      ...process.env,
+      ...resolveSelfHostedAdminModeEnv(process.env),
+      REACTPRESS_BUILD_ACTIVE: '1',
+      NEXT_TELEMETRY_DISABLED: '1',
+    }),
   });
-  if (build.status !== 0) process.exit(build.status || 1);
+  if (build.status !== 0) {
+    console.error('[ReactPress Client] Theme build failed');
+    process.exit(build.status || 1);
+  }
+  console.log('[ReactPress Client] Theme build complete');
 }
 
 function buildPm2ClientArgs(cmd, cmdArgs) {
@@ -123,16 +131,12 @@ function startWithPm2Background() {
     return;
   }
 
-  const result = spawnSync(
-    pm2Bin,
-    buildPm2ClientArgs(cmd, cmdArgs),
-    {
-      cwd: clientDir,
-      env: pm2Env,
-      stdio: 'inherit',
-      shell: cmd !== 'node' && process.platform === 'win32',
-    },
-  );
+  const result = spawnSync(pm2Bin, buildPm2ClientArgs(cmd, cmdArgs), {
+    cwd: clientDir,
+    env: pm2Env,
+    stdio: 'inherit',
+    shell: cmd !== 'node' && process.platform === 'win32',
+  });
   if (result.status !== 0) {
     console.warn('[ReactPress Client] Falling back to background node start');
     startWithNodeBackground();
@@ -159,10 +163,11 @@ function productionThemeEnv() {
     REACTPRESS_THEME_DIR: clientDir,
     REACTPRESS_API_URL: process.env.REACTPRESS_API_URL || `http://127.0.0.1:${apiPort}/api`,
     SERVER_API_URL: process.env.SERVER_API_URL || `http://127.0.0.1:${apiPort}/api`,
-    NEXT_PUBLIC_REACTPRESS_API_URL:
-      process.env.NEXT_PUBLIC_REACTPRESS_API_URL || `http://127.0.0.1:${apiPort}/api`,
+    NEXT_PUBLIC_REACTPRESS_API_URL: process.env.NEXT_PUBLIC_REACTPRESS_API_URL || `http://127.0.0.1:${apiPort}/api`,
     NEXT_PUBLIC_REACTPRESS_ADMIN_URL: process.env.NEXT_PUBLIC_REACTPRESS_ADMIN_URL || adminUrl,
     REACTPRESS_SKIP_DEV_PORT_REDIRECT: '1',
+    // Avoid theme-starter proxying /admin → dead :3000 after `reactpress init`.
+    ...resolveSelfHostedAdminModeEnv(process.env),
   };
 }
 
@@ -220,12 +225,16 @@ function startWithNode() {
   ensureBuilt();
   process.chdir(clientDir);
   const [cmd, cmdArgs] = runStartCommand();
-  const child = spawn(cmd, cmdArgs, {
-    stdio: 'inherit',
+  const child = spawnDevChild(cmd, cmdArgs, {
     cwd: clientDir,
     env: productionThemeEnv(),
+    shell: cmd !== 'node' && process.platform === 'win32',
   });
   child.on('close', (code) => process.exit(code ?? 0));
+  child.on('error', (err) => {
+    console.error('[ReactPress Client] Failed to start site:', err);
+    process.exit(1);
+  });
 }
 
 if (usePM2) {

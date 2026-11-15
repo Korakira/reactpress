@@ -152,7 +152,7 @@ export function fetchThemeCatalog() {
   >("/extension/themes/catalog");
 }
 
-export const OFFICIAL_THEME_STARTER_SPEC = "@reactpressjs/reactpress-theme-starter@1.0.0-beta.0";
+export const OFFICIAL_THEME_STARTER_SPEC = "@reactpressjs/reactpress-theme-starter@1.0.0-beta.1";
 
 export async function fetchTheme(id: string) {
   const theme = await themeFetch<ThemeListItem>(`/extension/themes/${id}`);
