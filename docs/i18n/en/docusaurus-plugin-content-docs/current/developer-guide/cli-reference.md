@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 title: CLI Command Reference
-description: Complete ReactPress CLI reference — init, doctor, logs, stop, and Monorepo pnpm script crosswalk.
-keywords: [reactpress, cli, commands, init, doctor, logs, pnpm]
+description: Complete ReactPress CLI reference — init, doctor, logs, stop, content automation, and Monorepo pnpm script crosswalk.
+keywords: [reactpress, cli, commands, init, doctor, logs, content, pnpm]
 ---
 
 # CLI Command Reference
@@ -11,7 +11,7 @@ ReactPress has two command surfaces: the **global CLI** (end users) and **Monore
 
 ## Global CLI (`@reactpressjs/reactpress`)
 
-4.0 streamlines end-user commands; legacy commands such as `dev`, `theme`, and `plugin` are removed — use Admin or Monorepo scripts instead.
+5.0 includes the core site commands and `content` automation below. Legacy commands such as `dev`, `theme`, and `plugin` are removed — use Admin or Monorepo scripts instead.
 
 ### `reactpress init [directory]`
 
@@ -53,6 +53,45 @@ Alias: `reactpress doctor logs`.
 ### `reactpress stop [directory]`
 
 Stop API and theme processes for the current project.
+
+### `reactpress content` (5.0)
+
+The global CLI also supports content automation. Run these commands from an initialized site directory with its API running. Use `reactpress content --help` or a subcommand's `--help` to see all options.
+
+| Command | Required flags | Purpose |
+| --- | --- | --- |
+| `reactpress content key` | `--create` | Sign in as an administrator and create an API key |
+| `reactpress content article create` | `--file <path>` | Create an article from Markdown; defaults to a draft |
+| `reactpress content article publish` | `--id <id>` | Publish an existing article |
+| `reactpress content media` | `--upload --file <path>` | Upload a media file |
+
+#### Credentials
+
+`content key --create` accepts `--username` and `--password`, or the `REACTPRESS_ADMIN_USER` and `REACTPRESS_ADMIN_PASSWORD` environment variables. Both default to `admin` when omitted; use your current administrator credentials if you changed them. The key name defaults to `agent` and scopes to `read,write`; override them with `--name` and `--scopes`.
+
+`--save` writes `REACTPRESS_API_KEY` and `REACTPRESS_API_URL` to the site's `.env`. The command also prints the new key: keep terminal output and `.env` private. Subsequent article and media commands accept `--api-key`, `REACTPRESS_API_KEY` from the environment or the saved key in `.env`. A `REACTPRESS_TOKEN` environment variable can supply a bearer token instead.
+
+All content commands accept `--api-url` to override the API base URL, including its prefix (for example, `http://127.0.0.1:3002/api`). Otherwise they use `REACTPRESS_API_URL` from the process environment or the site's configured API URL.
+
+#### Create a draft
+
+Save this as `draft.md`. A frontmatter `title` and a nonempty Markdown body are required:
+
+```markdown
+---
+title: My first draft
+---
+An article to review before publishing.
+```
+
+With administrator credentials available as described above:
+
+```bash
+reactpress content key --create --save
+reactpress content article create --file draft.md
+```
+
+Creating an article does not publish it by default. After reviewing the draft, use `reactpress content article publish --id <id>` with the returned article ID. Alternatively, `article create --publish` publishes at creation time; omit it for a draft-only workflow. Media uploads use `reactpress content media --upload --file <path>`.
 
 ### Help and version
 
